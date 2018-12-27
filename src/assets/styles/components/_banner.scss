@@ -1,0 +1,19 @@
+.banner {
+  background: color(blue, matisse);
+  background: url("../img/marcas.png") no-repeat left calc(100% - 210px), linear-gradient(
+      to bottom, color(blue, matisse) calc(100% - 170px),
+      color(mono, white) calc(100% - 170px));
+  padding-top: 50px;
+  height: 420px;
+
+  @include media(">=desktop") {
+    background: url("../img/marcas.png") no-repeat left calc(100% - 100px), linear-gradient(
+      to bottom, color(blue, matisse) calc(100% - 70px),
+      color(mono, white) calc(100% - 70px));
+    height: 360px;
+  }
+
+  @include media(">=wide") {
+    height: 520px;
+  }
+}

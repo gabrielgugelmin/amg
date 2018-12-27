@@ -1,0 +1,29 @@
+.logo {
+  &__border {
+    fill: color(logo, heather);
+  }
+
+  &__shield {
+    &--left {
+      fill: color(logo, denim);
+    }
+    &--right {
+      fill: color(logo, matisse);
+    }
+  }
+
+  &__amg,
+  &__text {
+    fill: color(logo, tory-blue);
+  }
+
+  &--white {
+    .logo__border,
+    .logo__shield--left,
+    .logo__shield--right,
+    .logo__amg,
+    .logo__text {
+      fill: color(mono, white);
+    }
+  }
+}

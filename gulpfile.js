@@ -21,7 +21,8 @@ var srcAssets       = src + 'assets/';
 var VendorFiles     = [srcAssets + 'js/vendors/*.js'];
 var CSSFiles        = [srcAssets + 'styles/**/*.scss'];
 var JSFiles         = [srcAssets + 'js/*.js'];
-var IMGFiles        = [srcAssets + 'img/**/*'];
+var IMGFiles        = [srcAssets + 'img/**/*.jpg', srcAssets + 'img/**/*.png'];
+var SVGFiles        = [srcAssets + 'img/**/*.svg'];
 var JSONFiles       = [srcAssets + 'json/*.json'];
 var HTMLFiles       = [src + '*.html'];
 
@@ -109,6 +110,12 @@ gulp.task('default', function() {
   console.log("Use 'gulp setup' command to initialize the project files");
   gulp.start('setup');
   gulp.start('watch');
+});
+
+gulp.task('svgmin', function() {
+  gulp.src(SVGFiles)
+  .pipe(svgmin())
+  .pipe(gulp.dest('build/assets/img/'));
 });
 
 gulp.task('setup', function() {
