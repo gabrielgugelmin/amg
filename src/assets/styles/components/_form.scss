@@ -1,6 +1,36 @@
 .form {
   .input {
-    border: 3px solid color(blue, matisse);
-    border-radius: 5px;
+    border-radius: 10px;
+    border: 2px solid color(blue, matisse);
+    padding: 5px 15px;
+    width: 100%;
+
+    @include placeholder {
+      color: color(gray, dove-gray);
+      font-style: italic;
+    }
+  }
+
+  &__control {
+    margin-bottom: 15px;
+    position: relative;
+
+    &--icon {
+      .input {
+        padding-right: 60px;
+      }
+
+      button {
+        background-color: transparent;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        width: 32px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

@@ -2,7 +2,7 @@ var autoprefixer    = require('gulp-autoprefixer');
 var browserSync     = require('browser-sync');
 var cache           = require('gulp-cache');
 var cleanCSS        = require('gulp-clean-css');
-var concat         = require('gulp-concat');
+var concat          = require('gulp-concat');
 var gulp            = require('gulp');
 var imagemin        = require('gulp-imagemin');
 var pug             = require('gulp-pug');
@@ -13,6 +13,7 @@ var uglify          = require('gulp-uglify');
 var plumber         = require('gulp-plumber');
 var sourcemaps      = require("gulp-sourcemaps");
 var babel           = require("gulp-babel");
+var svgmin          = require('gulp-svgmin');
 
 // My files
 var src             = 'src/';
@@ -119,7 +120,7 @@ gulp.task('svgmin', function() {
 });
 
 gulp.task('setup', function() {
-  gulp.start('styles', 'templates', 'scripts', 'images', 'json', 'setup-src');
+  gulp.start('styles', 'templates', 'scripts', 'images', 'json', 'setup-src', 'svgmin');
 });
 
 gulp.task('watch', function() {
@@ -127,6 +128,7 @@ gulp.task('watch', function() {
   gulp.watch(HTMLFiles, ['templates']);
   gulp.watch(JSFiles,   ['scripts']);
   gulp.watch(IMGFiles,  ['images']);
+  gulp.watch(SVGFiles,  ['svgmin']);
 
 // init server
   browserSync.init({

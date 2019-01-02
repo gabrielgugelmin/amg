@@ -14,7 +14,7 @@ $(function(){
 
 	// menu fixo ao scollar
   $(window).scroll(function() {
-    if ($(this).scrollTop() >= 60) {
+    if ($(this).scrollTop() >= 30) {
       $('.nav').addClass('nav--scrolling');
       $('.nav__logo .logo').removeClass('logo--white');
     } else{

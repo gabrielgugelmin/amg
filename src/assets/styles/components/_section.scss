@@ -1,0 +1,41 @@
+.section {
+  background-color: color(mono, white);
+  padding: 40px 0;
+
+  @include media(">=desktop") {
+    padding: 70px 0;
+  }
+
+  &__title {
+    color: color(blue, matisse);
+    font-size: 22px;
+    font-weight: fw("semibold");
+    margin-bottom: 25px;
+    text-align: center;
+
+    @include media(">=desktop") {
+      font-size: 36px;
+    }
+
+    &--big {
+      font-size: 28px;
+      font-weight: fw("semibold");
+
+      @include media(">=desktop") {
+        font-size: 48px;
+      }
+    }
+  }
+
+  &--pb-0 {
+    padding-bottom: 0;
+  }
+
+  &--pt-0 {
+    padding-top: 0;
+  }
+
+  &--gray {
+    background-color: color(gray, gallery);
+  }
+}

@@ -25,3 +25,84 @@ html, body {
 img {
   max-width: 100%;
 }
+
+.search {
+  &__form {
+    .input {
+      font-size: 18px;
+      font-weight: fw("light");
+      padding-bottom: 10px;
+      padding-top: 10px;
+
+      .icon {
+        fill: color(blue, matisse);
+      }
+
+      @include media(">=desktop") {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.lead {
+  &__item {
+    text-align: center;
+    margin-bottom: 45px;
+
+    @include media(">=tablet") {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    height: 60px;
+    margin-bottom: 15px;
+    max-width: 60px;
+
+    @include media(">=desktop") {
+      height: 100px;
+      margin-bottom: 25px;
+      max-width: 100px;
+    }
+  }
+
+  &__title {
+    color: color(blue, matisse);
+    font-size: 22px;
+    font-weight: fw("semibold");
+    margin-bottom: 15px;
+
+    @include media(">=desktop") {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    color: color(gray, dove-gray);
+    letter-spacing: ls(50, 22);
+
+    @include media(">=desktop") {
+      font-size: 22px;
+    }
+  }
+
+  .section__title {
+    margin-bottom: 40px;
+
+    @include media(">=desktop") {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.how {
+  .video {
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+}
