@@ -1,0 +1,104 @@
+.autobroker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item {
+    background-color: color(gray, gallery);
+    border-radius: 10px;
+    color: color(blue, matisse);
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin-bottom: 8px;
+    max-width: 400px;
+    padding: 15px;
+    transition: background-color .3s ease;
+    width: 100%;
+
+    @include media(">=tablet", "<desktop") {
+      margin: 0 6px 8px 0;
+      flex: .5;
+      width: 50%;
+
+      &:nth-child(2n){
+        margin-right: 0;
+      }
+    }
+
+    @include media(">=desktop") {
+      flex: none;
+      margin: 0 6px 8px 0;
+      width: 33%;
+
+      &:nth-child(3n){
+        margin-right: 0;
+      }
+    }
+
+    &:hover {
+      background-color: color(blue, matisse);
+
+      .autobroker__cat,
+      .autobroker__title,
+      .autobroker__city {
+        color: color(mono, white);
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 5px;
+  }
+
+  &__cat {
+    display: block;
+    font-size: 12px;
+    font-weight: fw("light");
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    transition: color .2s ease;
+
+    @include media(">=desktop") {
+      font-size: 14px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: fw("semibold");
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    transition: color .2s ease;
+
+    @include media(">=desktop") {
+      font-size: 24px;
+    }
+  }
+
+  &__city {
+    font-size: 16px;
+    font-weight: fw("regular");
+    transition: color .2s ease;
+
+    @include media(">=desktop") {
+      font-size: 18px;
+    }
+  }
+
+  &__img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    height: 100px;
+    overflow: hidden;
+    margin-right: 10px;
+    width: 100px;
+
+    @include media(">=desktop") {
+      height: 156px;
+      width: 152px;
+    }
+  }
+}

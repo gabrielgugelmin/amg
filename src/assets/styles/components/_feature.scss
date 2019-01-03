@@ -1,0 +1,44 @@
+.feature {
+  &__item {
+    background-color: color(blue, matisse);
+    background-size: cover;
+    background-position: 110px center;
+    background-repeat: no-repeat;
+    height: 220px;
+
+    @include media(">=desktop") {
+      background-position: right center;
+      background-size: contain;
+      height: 388px;
+    }
+
+    &--white {
+      background-color: color(mono, white);
+      background-position: -300px center;
+
+      .feature__title {
+        color: color(blue, matisse);
+        text-align: left;
+      }
+    }
+  }
+
+  &__title {
+    color: color(mono, white);
+    font-size: 20px;
+    font-style: italic;
+    font-weight: fw("light");
+
+    @include media(">=desktop") {
+      text-align: right;
+    }
+
+    @include media(">=desktop") {
+      font-size: 32px;
+    }
+
+    @include media(">=wide") {
+      font-size: 48px;
+    }
+  }
+}

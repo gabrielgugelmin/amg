@@ -25,7 +25,11 @@
         position: absolute;
         right: 15px;
         top: 10px;
-        width: 32px;
+        width: 24px;
+
+        @include media(">=desktop") {
+          width: 32px;
+        }
 
         &:hover {
           cursor: pointer;

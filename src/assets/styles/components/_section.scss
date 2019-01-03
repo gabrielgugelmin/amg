@@ -27,6 +27,18 @@
     }
   }
 
+  &__subtitle {
+    color: color(gray, dove-gray);
+    font-size: 16px;
+    letter-spacing: ls(50, 22);
+    line-height: 1.5;
+    text-align: center;
+
+    @include media(">=desktop") {
+      font-size: 22px;
+    }
+  }
+
   &--pb-0 {
     padding-bottom: 0;
   }

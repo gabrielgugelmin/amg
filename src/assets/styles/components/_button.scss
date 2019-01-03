@@ -1,0 +1,14 @@
+.button {
+  background-color: color(blue, matisse);
+  border-radius: 5px;
+  color: color(mono, white);
+  font-size: 22px;
+  font-weight: fw("regular");
+  padding: 18px 45px;
+  text-transform: uppercase;
+  transition: background-color .2s ease;
+
+  &:hover {
+    background-color: darken(color(blue, matisse), 15%);
+  }
+}

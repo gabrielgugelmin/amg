@@ -106,3 +106,15 @@ img {
     margin: 0 auto;
   }
 }
+
+.meet {
+  .autobroker {
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+    @include media(">=desktop") {
+      margin-bottom: 85px;
+      margin-top: 85px;
+    }
+  }
+}
