@@ -1,7 +1,7 @@
 $(function(){
 	clickOutsideMenu();
 
-  // MENU
+  // menu
   $('.js-open-menu').on('click', function(e) {
     e.preventDefault();
     openMenu();
@@ -12,7 +12,7 @@ $(function(){
     closeMenu();
   });
 
-	// menu fixo ao scollar
+	// menu fixo ao scrollar
   $(window).scroll(function() {
     if ($(this).scrollTop() >= 30) {
       $('.nav').addClass('nav--scrolling');
@@ -21,6 +21,11 @@ $(function(){
     	$('.nav').removeClass('nav--scrolling');
     	$('.nav__logo .logo').addClass('logo--white');
     }
+  });
+
+  // slider de depoimentos
+  $('.js-depo-slider').slick({
+    arrows: true,
   });
 
   // MAPS

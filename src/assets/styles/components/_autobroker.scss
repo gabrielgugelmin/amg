@@ -9,7 +9,7 @@
     color: color(blue, matisse);
     display: flex;
     flex-direction: row;
-    flex: 1;
+    flex-basis: 100%;
     margin-bottom: 8px;
     max-width: 400px;
     padding: 15px;
@@ -18,8 +18,7 @@
 
     @include media(">=tablet", "<desktop") {
       margin: 0 6px 8px 0;
-      flex: .5;
-      width: 50%;
+      flex-basis: calc(50% - 3px);
 
       &:nth-child(2n){
         margin-right: 0;
@@ -29,7 +28,7 @@
     @include media(">=desktop") {
       flex: none;
       margin: 0 6px 8px 0;
-      width: 33%;
+      flex-basis: calc(33.333% - 4px);
 
       &:nth-child(3n){
         margin-right: 0;

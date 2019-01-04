@@ -1,0 +1,28 @@
+.depo {
+  &__item {
+
+    @include media(">=tablet") {
+      padding: 0 40px;
+    }
+
+    @include media(">=wide") {
+      padding: 0 170px;
+    }
+  }
+
+  &__text,
+  &__author {
+    color: color(gray, gray);
+    font-size: 18px;
+    font-style: italic;
+
+    @include media(">=desktop") {
+      font-size: 36px;
+    }
+  }
+
+  &__author {
+    margin-top: 30px;
+    text-align: right;
+  }
+}
