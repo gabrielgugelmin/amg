@@ -1,5 +1,10 @@
 .depo {
+  .slick-slide {
+    height: auto;
+  }
+
   &__item {
+    padding: 0 30px;
 
     @include media(">=tablet") {
       padding: 0 40px;
@@ -24,5 +29,30 @@
   &__author {
     margin-top: 30px;
     text-align: right;
+  }
+
+  &__arrow {
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+
+    @include media(">=tablet") {
+      width: 20px;
+    }
+
+    @include media(">=wide") {
+      width: 30px;
+    }
+
+    &--prev {
+      left: 0;
+      transform: translateY(-50%) scaleX(-1);
+    }
+
+    &--next {
+      right: 0;
+    }
   }
 }

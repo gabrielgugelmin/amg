@@ -9,6 +9,45 @@
       color: color(gray, dove-gray);
       font-style: italic;
     }
+
+    &-group {
+      align-items: stretch;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      width: 100%;
+
+      .input {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        flex: 1 1 auto;
+        font-weight: fw("light");
+        margin-bottom: 0;
+        position: relative;
+        width: 1%;
+      }
+
+      button {
+        background-color: color(mono, white);
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        color: color(blue, matisse);
+        cursor: pointer;
+        font-weight: fw("semibold");
+        padding: 0 15px;
+        text-transform: uppercase;
+        transition: background-color .2s ease;
+
+        &:hover {
+          background-color: darken(color(mono, white), 10%);
+        }
+
+        @include media(">=wide") {
+          padding: 0 40px;
+          font-size: 26px;
+        }
+      }
+    }
   }
 
   &__control {
@@ -35,6 +74,19 @@
           cursor: pointer;
         }
       }
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: ls(150, 16);
+
+    @include media(">=wide") {
+      font-size: 18px;
+      letter-spacing: ls(150, 18);
     }
   }
 }

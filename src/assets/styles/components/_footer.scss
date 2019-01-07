@@ -1,0 +1,126 @@
+.footer {
+  background: url("../img/marcas.png") repeat-x left calc(100% - 45px) color(blue, matisse);
+  padding: 40px 0 80px;
+
+  @include media(">=desktop") {
+    padding: 60px 0 200px;
+  }
+
+  .form {
+    .input {
+      background-color: transparent;
+      border-color: color(mono, white);
+      border-width: 1px;
+      color: color(mono, white);
+      padding: 10px 15px;
+
+      @include placeholder {
+        color: color(mono, white);
+      }
+
+      @include media(">=wide") {
+        padding: 18px 15px;
+        font-size: 24px;
+      }
+    }
+
+    .form__label {
+      color: color(mono, white);
+    }
+  }
+
+  &__forms {
+    .form {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+
+    img {
+      width: 120px;
+    }
+  }
+
+  &__text {
+    color: color(mono, white);
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 15px;
+
+    @include media(">=wide") {
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    margin: 30px 0;
+
+    @include media(">=wide") {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    color: color(mono, white);
+    font-size: 16px;
+    letter-spacing: ls(150, 16);
+    text-transform: uppercase;
+  }
+
+  &__tel {
+    color: color(mono, white);
+    font-size: 20px;
+    letter-spacing: ls(150, 20);
+
+    @include media(">=wide") {
+      font-size: 20px;
+      letter-spacing: ls(150, 23);
+    }
+  }
+
+  &__email {
+    color: color(mono, white);
+    font-size: 16px;
+    letter-spacing: ls(150, 16);
+  }
+
+  &__social {
+    margin: 30px 0;
+
+    @include media(">=wide") {
+      margin: 0;
+    }
+
+    h6 {
+      color: color(mono, white);
+      font-size: 16px;
+      font-weight: fw("regular");
+      letter-spacing: ls(150, 16);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+
+      li {
+        margin-right: 30px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      img {
+        height: 32px;
+      }
+    }
+  }
+}
