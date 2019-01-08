@@ -11,16 +11,23 @@ html, body {
   padding: 0;
 }
 
-.page-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  // overflow: hidden;
-}
+.page {
+  &-content{
+    margin-top: 100px;
+    flex: 1;
+  }
 
-.page-content{
-  margin-top: 80px;
-	flex: 1;
+  &-top {
+    background: url("../img/marcas.png") repeat-x left calc(100% - 20px) color(blue, matisse);
+    background-size: auto 45px, cover;
+    height: 100px;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
 }
 
 img {
@@ -116,6 +123,17 @@ img {
     @include media(">=desktop") {
       margin-bottom: 85px;
       margin-top: 85px;
+    }
+  }
+}
+
+.grid {
+  &__footer {
+    padding-top: 40px;
+
+    .button-group {
+      margin: 0 auto;
+      max-width: 470px;
     }
   }
 }

@@ -64,7 +64,7 @@ gulp.task('scripts', function() {
   return gulp.src(VendorFiles.concat(JSFiles))
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(babel())
+    // .pipe(babel())
     .pipe(concat("bundle.js"))
     // .pipe(uglify())
     .pipe(sourcemaps.write("."))

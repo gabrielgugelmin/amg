@@ -11,8 +11,8 @@
   z-index: z("fixed");
 
   @include media(">=desktop") {
-    height: 110px;
-    padding: 50px 0 20px;
+    height: 100px;
+    padding: 15px 0;
   }
 
   &__logo {
@@ -20,6 +20,7 @@
     width: 90px;
 
     @include media(">=desktop") {
+      margin-top: 0;
       display: inline-block;
       width: 120px;
 

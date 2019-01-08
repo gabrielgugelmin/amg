@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "alias": "john",
+    "nome": "John Brown",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "regiao": "regiao1",
+    "bairro": "bairro sp",
+    "img": "assets/img/brokers/man1.jpg",
+    "categoria": "autobroker bmz"
+  },
+  {
+    "id": 2,
+    "alias": "peter",
+    "nome": "Peter Brown",
+    "estado": "RJ",
+    "cidade": "Rio de Janeiro",
+    "regiao": "regiao2",
+    "bairro": "bairro rj",
+    "img": "assets/img/brokers/man1.jpg",
+    "categoria": "autobroker bmz"
+  },
+  {
+    "id": 3,
+    "alias": "konoshi",
+    "nome": "Konishi HOP",
+    "estado": "PR",
+    "cidade": "Curitiba",
+    "regiao": "regiao3",
+    "bairro": "bairro cwb",
+    "img": "assets/img/brokers/man1.jpg",
+    "categoria": "autobroker bmz"
+  },
+  {
+    "id": 4,
+    "alias": "maria",
+    "nome": "MARIA SILVA",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "regiao": "regiao2",
+    "bairro": "bairro sp",
+    "img": "assets/img/brokers/man1.jpg",
+    "categoria": "autobroker bmz"
+  }
+]

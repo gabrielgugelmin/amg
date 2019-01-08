@@ -2,13 +2,49 @@
   background-color: color(blue, matisse);
   border-radius: 5px;
   color: color(mono, white);
+  cursor: pointer;
   font-size: 22px;
   font-weight: fw("regular");
   padding: 18px 45px;
   text-transform: uppercase;
   transition: background-color .2s ease;
 
+  &:focus {
+    outline: 1px dashed color(mono, white);
+    outline-offset: -5px;
+  }
+
   &:hover {
     background-color: darken(color(blue, matisse), 15%);
+  }
+
+  &--gray {
+    background-color: color(gray, nobel);
+
+    &:hover {
+      background-color: darken(color(gray, nobel), 15%);
+    }
+  }
+
+  &-group {
+    display: flex;
+
+    .button {
+      font-size: 16px;
+
+      @include media(">=desktop") {
+        font-size: 18px;
+      }
+
+      &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
   }
 }
