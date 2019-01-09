@@ -66,19 +66,16 @@ $(function () {
     smoothScroll();
   });
 
-
-
-
   if ($('.js-grid').length) {
     getProducts();
   }
 
-  var qsRegex;
-var buttonFilter;
-var marcaFilter;
-var modeloFilter;
-
-function initIsotope() {
+  function initIsotope() {
+    var qsRegex;
+    var estadosFilter;
+    var cidadesFilter;
+    var regioesFilter;
+    var bairrosFilter;
 
   // init Isotope
   var $container = $('.js-grid').isotope({
@@ -87,26 +84,29 @@ function initIsotope() {
     filter: function () {
       var $this = $(this);
       var searchResult = qsRegex ? $this.text().match(qsRegex) : true;
-      var buttonResult = buttonFilter ? $this.is( buttonFilter ) : true;
-      var estadoResult = marcaFilter ? $this.is(marcaFilter) : true;
-      var cidadeResult = modeloFilter ? $this.is(modeloFilter) : true;
-      return searchResult && estadoResult && cidadeResult && buttonResult;
+      estadosResult = estadosFilter ? $this.is(estadosFilter) : true;
+      cidadesResult = cidadesFilter ? $this.is(cidadesFilter) : true;
+      regioesResult = regioesFilter ? $this.is(regioesFilter) : true;
+      bairrosResult = bairrosFilter ? $this.is(bairrosFilter) : true;
+      return searchResult && estadosResult && cidadesResult && regioesResult && bairrosResult;
     }
   });
 
-  var initShow = 6; //number of items loaded on init & onclick load more button
-  var counter = initShow; //counter for load more button
-  var iso = $container.data('isotope'); // get Isotope instance
+  var initShow = 6; // Número de itens exibidos ao carregar
+  var counter = initShow; // Número de itens a serem carregados quando clicar no botão Carregar Mais
+  var iso = $container.data('isotope'); // Instância do Isotope
   var footer = $('.grid__footer');
 
-  if ($container.is('#Container')) {
-    //append load more button
+  if ($container.is('#grid-autobrokers')) {
+    // Inclui o botão para carregar mais itens
     footer.append('<div class="button-group"><button class="button js-load-more">carregar</button><a class="button button--gray">entrar em contato</a></div>');
   }
 
-  loadMore(initShow); //execute function onload
+  // Carrega os itens iniciais
+  loadMore(initShow);
 
   function loadMore(toShow) {
+    // Oculta os itens que ultrapassaram o limite do initShow ou counter
     var elems = $container.isotope('getFilteredItemElements');
     $container.find(".hidden").removeClass("hidden");
     var hiddenElems = iso.filteredItems.slice(toShow, elems.length).map(function (item) {
@@ -116,82 +116,59 @@ function initIsotope() {
     $(hiddenElems).addClass('hidden');
     $container.isotope('layout');
 
-    //when no more to load, hide show more button
-    if (hiddenElems.length == 0 && $container.is('#Container')) {
-      jQuery(".js-load-more").hide();
-	  	if (footer.find('#entreContato').length) {
-
-	    } else {
-		    footer.append('<a href="#formContato" id="entreContato" class="u-button js-scroll"><span>ENTRAR EM CONTATO</span></a>');
-	    }
+    // Se não tiver mais itens a serem carregados, oculta o botão Carregar Mais
+    if (hiddenElems.length == 0 && $container.is('#grid-autobrokers')) {
+	  	$('.js-load-more').attr("disabled", "disabled");
     } else {
-      jQuery("#entreContato").show();
-      jQuery(".js-load-more").show();
+      $('.js-load-more').removeAttr("disabled");
     };
 
     $('.js-load-more').removeClass('is-loading');
   }
 
-  //when load more button clicked
+  // Carrega mais itens
   $(".js-load-more").click(function () {
     $(this).addClass('is-loading');
-
-    if ($('.js-filter button').data('clicked')) {
-      //when filter button clicked, set initial value for counter
-      counter = initShow;
-      $('.js-filter button').data('clicked', false);
-    } else {
-      counter = counter;
-    };
-
     counter = counter + initShow;
 
     loadMore(counter);
   });
 
-  // change is-active class on buttons
-  //$('.filtro__item').each(function (i, buttonGroup) {
-    $('.filtro__item').on('click', function () {
-
-      $('.filtro__item').not(this).removeClass('is-active');
-      $(this).addClass('is-active');
-	  buttonFilter = $(this).attr('data-filter');
-      var categoria = $(this).attr('data-filter');
-      $container.isotope();
-      loadMore(1000);
-    });
-  //});
-
-  $('#ordem').on('change', function () {
-    var filterValue = this.value;
-    loadMore(1000);
-    $container.isotope({
-      sortBy: filterValue,
-      sortAscending: true
-    });
-  });
-
-  $('#marca').on('change', function () {
-    marcaFilter = this.value;
-	loadMore(1000);
+  // Filtra os itens pelo Estado
+  $('#estados').on('change', function () {
+    estadosFilter = this.value;
+	  loadMore(1000);
     $container.isotope();
   });
 
-  $('#modelo').on('change', function () {
-    modeloFilter = this.value;
-	loadMore(1000);
+  // Filtra os itens pela Cidade
+  $('#cidades').on('change', function () {
+    cidadesFilter = this.value;
+	  loadMore(1000);
     $container.isotope();
   });
 
-  // use value of search field to filter
+  // Filtra os itens pela Região
+  $('#regioes').on('change', function () {
+    regioesFilter = this.value;
+	  loadMore(1000);
+    $container.isotope();
+  });
+
+  // Filtra os itens pela Cidade
+  $('#bairros').on('change', function () {
+    bairrosFilter = this.value;
+	  loadMore(1000);
+    $container.isotope();
+  });
+
+  // Filtra os itens de acordo com o digitado na busca
   var $quicksearch = $('.quicksearch').keyup( debounce( function() {
     qsRegex = new RegExp($quicksearch.val(), 'gi');
-
     $container.isotope();
     loadMore(1000);
   }, 200));
 
-  // debounce so filtering doesn't happen every millisecond
   function debounce(fn, threshold) {
     var timeout;
     return function debounced() {
@@ -205,21 +182,17 @@ function initIsotope() {
       timeout = setTimeout(delayed, threshold || 100);
     }
   }
-
 }
 
-function getProducts() {
-
-  $.getJSON("/assets/json/autobrokers.json", function (data) {
-  })
+  function getProducts() {
+    $.getJSON("/assets/json/autobrokers.json", function (data) {})
     .fail(function (data) {
       console.log("error");
     }).done(function (data) {
-      console.log(data);
       var x = false;
       $.each(data, function (index, item) {
         if(item.id) {
-          var $box = '<a class="autobroker__item ' + item.estado + ' ' + item.cidade + ' ' + item.regiao + ' ' + item.bairro + '" href=\'/autobroker/'+ item.alias +'/'+ item.id +'\'>' +
+          var $box = '<a class="autobroker__item ' + item.estado + ' ' + slugify(item.cidade) + ' ' + slugify(item.regiao) + ' ' + slugify(item.bairro) + '" href=\'/autobroker/'+ slugify(item.nome) +'/'+ item.id +'\'>' +
               '<div class="autobroker__img" style="background-image: url(' + item.img + ')"></div>' +
               '<div class="autobroker__content">' +
                 '<small class="autobroker__cat">' + item.categoria + '</small>' +
@@ -227,22 +200,14 @@ function getProducts() {
                 '<p class="autobroker__city">' + item.cidade + ' - ' + item.estado + '</p>' +
               '</div>' +
             '</a>';
-        } else {
-          var $box = '<h3>Nada por aqui. <a href="./">Clique para voltar.</a></h3><br>';
         }
         $(".js-grid").append($box);
       });
 
-      if (x == true) {
-      } else {
-        initIsotope();
-      }
-
+      initIsotope();
     });
-}
-
+  }
 });
-
 
 
 function closeMenu() {
@@ -302,4 +267,21 @@ function smoothScroll() {
 			//window.location.hash = hash;
 		});
 	}
+}
+function slugify(text) {
+  text = text.replace(/^\s+|\s+$/g, ''); // trim
+  text = text.toLowerCase();
+
+  // remove accents, swap ñ for n, etc
+  var from = "ãàáäâẽèéëêìíïîõòóöôùúüûñç·/_,:;";
+  var to   = "aaaaaeeeeeiiiiooooouuuunc------";
+  for (var i=0, l=from.length ; i<l ; i++) {
+    text = text.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+  }
+
+  text = text.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+    .replace(/\s+/g, '-') // collapse whitespace and replace by -
+    .replace(/-+/g, '-'); // collapse dashes
+
+  return text;
 }

@@ -11,28 +11,29 @@
     flex-direction: row;
     flex-basis: 100%;
     margin-bottom: 8px;
-    max-width: 400px;
+    // max-width: 400px;
     padding: 15px;
     transition: background-color .3s ease;
     width: 100%;
 
-    @include media(">=tablet", "<desktop") {
+    @include media(">=tablet", "<wide") {
       margin: 0 6px 8px 0;
-      flex-basis: calc(50% - 3px);
+      // flex-basis: calc(50% - 3px);
+      width: calc(50% - 6px);
 
-      &:nth-child(2n){
-        margin-right: 0;
-      }
+      // &:nth-child(2n){
+      //    margin-right: 0;
+      // }
     }
 
-    @include media(">=desktop") {
+    @include media(">=wide") {
       flex: none;
-      margin: 0 6px 8px 0;
-      flex-basis: calc(33.333% - 4px);
+      margin: 3px;
+      width: calc(33.333% - 6px);
 
-      &:nth-child(3n){
-        margin-right: 0;
-      }
+      // &:nth-child(3n){
+      //   margin-right: 0;
+      // }
     }
 
     &:hover {

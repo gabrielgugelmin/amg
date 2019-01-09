@@ -1,55 +1,4 @@
 .form {
-  .input {
-    border-radius: 10px;
-    border: 2px solid color(blue, matisse);
-    padding: 5px 15px;
-    width: 100%;
-
-    @include placeholder {
-      color: color(gray, dove-gray);
-      font-style: italic;
-    }
-
-    &-group {
-      align-items: stretch;
-      display: flex;
-      flex-wrap: wrap;
-      position: relative;
-      width: 100%;
-
-      .input {
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0;
-        flex: 1 1 auto;
-        font-weight: fw("light");
-        margin-bottom: 0;
-        position: relative;
-        width: 1%;
-      }
-
-      button {
-        background-color: color(mono, white);
-        border-bottom-right-radius: 10px;
-        border-top-right-radius: 10px;
-        color: color(blue, matisse);
-        cursor: pointer;
-        font-weight: fw("semibold");
-        padding: 0 15px;
-        text-transform: uppercase;
-        transition: background-color .2s ease;
-
-        &:hover {
-          background-color: darken(color(mono, white), 10%);
-        }
-
-        @include media(">=wide") {
-          padding: 0 40px;
-          font-size: 26px;
-        }
-      }
-    }
-  }
-
   &__control {
     margin-bottom: 15px;
     position: relative;
@@ -63,7 +12,8 @@
         background-color: transparent;
         position: absolute;
         right: 15px;
-        top: 10px;
+        top: 50%;
+        transform: translateY(-50%);
         width: 24px;
 
         @include media(">=desktop") {
@@ -89,4 +39,71 @@
       letter-spacing: ls(150, 18);
     }
   }
+}
+
+.input{
+  &-group {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+
+    .input {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      flex: 1 1 auto;
+      font-weight: fw("light");
+      margin-bottom: 0;
+      position: relative;
+      width: 1%;
+    }
+
+    button {
+      background-color: color(mono, white);
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      color: color(blue, matisse);
+      cursor: pointer;
+      font-weight: fw("semibold");
+      padding: 0 15px;
+      text-transform: uppercase;
+      transition: background-color .2s ease;
+
+      &:hover {
+        background-color: darken(color(mono, white), 10%);
+      }
+
+      @include media(">=wide") {
+        padding: 0 40px;
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+input,
+textarea,
+select {
+  border: 2px solid color(blue, matisse);
+  border-radius: 10px;
+  font-size: 16px;
+  height: 46px;
+  padding: 5px 15px;
+  width: 100%;
+
+  @include placeholder {
+    color: color(gray, dove-gray);
+    font-style: italic;
+  }
+
+  @include media(">=desktop") {
+    font-size: 22px;
+    height: 52px;
+  }
+}
+
+select {
+  padding-right: 30px;
+  background: right / contain no-repeat url(../img/icons/menu-down.svg);
 }

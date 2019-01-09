@@ -6,6 +6,7 @@
   font-size: 22px;
   font-weight: fw("regular");
   padding: 18px 45px;
+  text-align: center;
   text-transform: uppercase;
   transition: background-color .2s ease;
 
@@ -16,6 +17,11 @@
 
   &:hover {
     background-color: darken(color(blue, matisse), 15%);
+  }
+
+  &:disabled {
+    background-color: lighten(color(blue, matisse), 48%);
+    cursor: default;
   }
 
   &--gray {
@@ -44,6 +50,7 @@
       &:last-child {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+        flex: 1;
       }
     }
   }

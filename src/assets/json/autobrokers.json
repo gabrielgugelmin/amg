@@ -1,45 +1,81 @@
 [
   {
     "id": 1,
-    "alias": "john",
     "nome": "John Brown",
     "estado": "SP",
     "cidade": "São Paulo",
     "regiao": "regiao1",
-    "bairro": "bairro sp",
+    "bairro": "bairro 1",
     "img": "assets/img/brokers/man1.jpg",
     "categoria": "autobroker bmz"
   },
   {
     "id": 2,
-    "alias": "peter",
     "nome": "Peter Brown",
     "estado": "RJ",
     "cidade": "Rio de Janeiro",
     "regiao": "regiao2",
-    "bairro": "bairro rj",
+    "bairro": "bairro 3",
     "img": "assets/img/brokers/man1.jpg",
     "categoria": "autobroker bmz"
   },
   {
     "id": 3,
-    "alias": "konoshi",
     "nome": "Konishi HOP",
     "estado": "PR",
     "cidade": "Curitiba",
     "regiao": "regiao3",
-    "bairro": "bairro cwb",
+    "bairro": "bairro 3",
     "img": "assets/img/brokers/man1.jpg",
     "categoria": "autobroker bmz"
   },
   {
     "id": 4,
-    "alias": "maria",
     "nome": "MARIA SILVA",
     "estado": "SP",
     "cidade": "São Paulo",
     "regiao": "regiao2",
-    "bairro": "bairro sp",
+    "bairro": "bairro 1",
+    "img": "assets/img/brokers/man1.jpg",
+    "categoria": "autobroker bmz"
+  },
+  {
+    "id": 5,
+    "nome": "Teste da SILVA",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "regiao": "regiao2",
+    "bairro": "bairro 2",
+    "img": "assets/img/brokers/man1.jpg",
+    "categoria": "autobroker bmz"
+  },
+  {
+    "id": 6,
+    "nome": "Paloma",
+    "estado": "RJ",
+    "cidade": "Rio de Janeiro",
+    "regiao": "regiao2",
+    "bairro": "bairro 2",
+    "img": "assets/img/brokers/man1.jpg",
+    "categoria": "autobroker bmz"
+  },
+  {
+    "id": 7,
+    "nome": "Rita",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "regiao": "regiao2",
+    "bairro": "bairro 1",
+    "img": "assets/img/brokers/man1.jpg",
+    "categoria": "autobroker bmz"
+  },
+  {
+    "id": 8,
+    "nome": "Paulo",
+    "estado": "PR",
+    "cidade": "Curitiba",
+    "regiao": "regiao2",
+    "bairro": "bairro 3",
     "img": "assets/img/brokers/man1.jpg",
     "categoria": "autobroker bmz"
   }
