@@ -99,7 +99,7 @@ $(function () {
 
   if ($container.is('#grid-autobrokers')) {
     // Inclui o botão para carregar mais itens
-    footer.append('<div class="button-group"><button class="button js-load-more">carregar</button><a class="button button--gray">entrar em contato</a></div>');
+    footer.append('<div class="button-group"><button class="button js-load-more">carregar</button><a class="button button--gray" href="fale-conosco.html">entrar em contato</a></div>');
   }
 
   // Carrega os itens iniciais

@@ -27,8 +27,12 @@
       letter-spacing: ls(50, 16);
     }
 
-    &:hover {
-      text-decoration: underline;
+    @at-root {
+      a#{&} {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

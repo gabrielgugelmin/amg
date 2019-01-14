@@ -1,0 +1,55 @@
+.not-found {
+  padding-bottom: 40px;
+  @include media(">=desktop") {
+    padding-bottom: 110px;
+  }
+  &__subtitle {
+    color: color(gray, dove-gray);
+    font-size: 16px;
+    font-weight: fw("light");
+
+    @include media(">=desktop") {
+      font-size: 24px;
+    }
+  }
+
+  &__title {
+    color: color(blue, matisse);
+    font-weight: fw("bold");
+    font-size: 28px;
+
+    @include media(">=desktop") {
+      font-size: 48px;
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 220px;
+    margin: 40px auto;
+
+    @include media(">=desktop") {
+      max-width: 100%;
+      margin: 80px 0 0 0;
+    }
+  }
+
+  &__text {
+    color: color(gray, dove-gray);
+    font-size: 16px;
+    margin-bottom: 30px;
+
+    @include media(">=desktop") {
+      font-size: 32px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .button-group {
+    .button {
+      @include media(">=tablet", "<desktop") {
+        padding-top: 10px;
+      }
+    }
+  }
+}

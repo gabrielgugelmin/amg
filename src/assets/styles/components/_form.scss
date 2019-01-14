@@ -39,6 +39,27 @@
       letter-spacing: ls(150, 18);
     }
   }
+
+  &__title {
+    color: color(blue, matisse);
+    font-weight: fw("semibold");
+    font-size: 18px;
+    margin-bottom: 15px;;
+
+    @include media(">=desktop") {
+      font-size: 32px;
+    }
+  }
+
+  &__submit {
+    margin-top: 15px;
+    width: 100%;
+
+    @include media(">=phone") {
+      margin-top: 0;
+      width: auto;
+    }
+  }
 }
 
 .input{
@@ -82,7 +103,9 @@
   }
 }
 
-input,
+input[type=text],
+input[type=email],
+input[type=tel],
 textarea,
 select {
   border: 2px solid color(blue, matisse);
@@ -106,4 +129,121 @@ select {
 select {
   padding-right: 30px;
   background: right / contain no-repeat url(../img/icons/menu-down.svg);
+}
+
+textarea {
+  height: 110px;
+  resize: vertical;
+}
+
+$checkbox-bg-color-checked: transparent;
+$checkbox-border-color-checked: $checkbox-bg-color-checked;
+$checkbox-bg-color-unchecked: #fff;
+$checkbox-border-color-unchecked:  #757575;
+
+$radio-checked-color: $checkbox-bg-color-checked;
+$radio-unchecked-color: $checkbox-border-color-unchecked;
+
+
+input[type=checkbox] {
+  display: none;
+
+  @mixin checkbox-structure($width: 36px, $height: 36px, $top: -1px, $left: '', $border-color: '', $background-color: '') {
+    content: "";
+    height: $height;
+    position: absolute;
+    border-radius: 10px;
+    top: $top;
+    width: $width;
+
+    @if $border-color!='' {
+      border: 2px solid color(blue, matisse);
+    }
+
+    @if $background-color!='' {
+      background-color: $background-color;
+    }
+
+    transition: .2s;
+  }
+
+  &:not(:checked) + label::before {
+    @include checkbox-structure($border-color: $checkbox-border-color-unchecked, $background-color: $checkbox-bg-color-unchecked);
+
+    left: 0;
+  }
+
+  &:checked + label {
+    &::before {
+      @include checkbox-structure($border-color: $checkbox-border-color-checked, $background-color: $checkbox-bg-color-checked);
+
+      left: 0;
+    }
+
+    &::after {
+      @include checkbox-structure($width: 0, $height: 0);
+      animation: fade-in .25s;
+      content: "\2713";
+      font-size: 24px;
+      left: 7px;
+      top: 4px;
+      color: color(blue, matisse)
+    }
+  }
+}
+
+input[type=checkbox] + label,
+input[type=radio] + label {
+  color: color(gray, dove-gray);
+  cursor: pointer;
+  font-size: 16px;
+  font-style: italic;
+  padding-left: 56px;
+  position: relative;
+
+  @include media(">=desktop") {
+    font-size: 22px;
+  }
+}
+
+input[type=radio] {
+  display: none;
+
+  @mixin radio-structure($color) {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    top: -1px;
+    border-radius: 50%;
+    border: 2px solid $color;
+  }
+
+
+  &:not(:checked) + label::before {
+    @include radio-structure($radio-unchecked-color);
+  }
+
+  &:checked + label {
+    &::before {
+      @include radio-structure($radio-checked-color);
+    }
+
+    &::after {
+      @include radio-structure($radio-checked-color);
+
+      background-color: $radio-checked-color;
+      -webkit-transform: scale(0.4);
+      -ms-transform: scale(0.4); 
+      transform: scale(0.4); 
+      animation: fade-in .5s;
+    }
+  }
+}
+
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

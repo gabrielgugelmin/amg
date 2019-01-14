@@ -1,0 +1,59 @@
+.contact {
+  &__text {
+    color: color(blue, matisse);
+    display: block;
+    font-weight: fw("semibold");
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+
+    @include media(">=tablet") {
+      text-align: left;
+    }
+
+    @include media(">=desktop") {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+
+    @include media(">=tablet") {
+      justify-content: flex-start;
+    }
+
+    li {
+      margin-right: 40px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    svg {
+      height: 48px;
+
+      path {
+        fill: color(blue, matisse);
+        transition: .25s ease-in-out;
+      }
+
+      &:hover {
+        path {
+          fill: darken(color(blue, matisse), 15%);
+        }
+      }
+    }
+  }
+
+  .form {
+    padding: 40px 0;
+
+    @include media(">=desktop") {
+      padding: 90px 0 100px;
+    }
+  }
+}
