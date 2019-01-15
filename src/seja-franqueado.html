@@ -66,7 +66,7 @@
           <ul class="menu__list">
             <li class="menu__item"><a class="menu__link" href="vender-veiculo.html">VENDA SEU VEÍCULO</a></li>
             <li class="menu__item"><a class="menu__link" href="solicitar-veiculo.html">SOLICITE UM VEÍCULO</a></li>
-            <li class="menu__item menu__item--active"><a class="menu__link" href="showroom.html">SHOWROOM</a></li>
+            <li class="menu__item"><a class="menu__link" href="showroom.html">SHOWROOM</a></li>
             <li class="menu__item"><a class="menu__link" href="autobrokers.html">AUTOBROKERS</a></li>
             <li class="menu__item"><a class="menu__link" href="franquia.html">FRANQUIA</a></li>
             <li class="menu__item menu__item--icon"><a class="menu__link" href="usuario.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.6 50.1"><path d="M36.6 50.1H1c-.6 0-1-.4-1-1V31.3c0-4.9 4-8.8 8.8-8.8h20c4.9 0 8.8 4 8.8 8.8v17.8c0 .6-.4 1-1 1zM2 48.1h33.6V31.3c0-3.8-3.1-6.8-6.8-6.8h-20C5 24.5 2 27.6 2 31.3v16.8zm16.8-29.6c-5.1 0-9.2-4.1-9.2-9.2S13.7 0 18.8 0 28 4.1 28 9.2s-4.1 9.3-9.2 9.3zm0-16.5c-4 0-7.2 3.2-7.2 7.2s3.2 7.2 7.2 7.2S26 13.2 26 9.2 22.8 2 18.8 2z"/></svg></a></li>
@@ -96,93 +96,184 @@
       <div class="container-fluid">
         <div class="breadcrumb">
           <a class="breadcrumb__item" href="index.html">Home</a>
-          <span class="breadcrumb__item">Showroom</span>
+          <span class="breadcrumb__item">Fale Conosco</span>
         </div>
       </div>
 
-      <section class="section">
+      <section class="section franqueado">
         <div class="container">
-          <h2 class="section__title">Encontre um Autobroker</h2>
-          <div class="grid-search">
-            <div class="form__control form__control--icon">
-              <input type="search" class="input quicksearch" placeholder="Buscar por nome ou termo">
-              <button>
-                <img src="assets/img/icons/search.svg" alt="Procurar" class="icon">
-              </button>
-            </div>
-            <div class="grid-filter">
-              <select class="grid-filter__input" name="estados" id="estados">
-                <option value="" selected disabled>Estado</option>
-                <option value="*">Todos</option>
-                <option value=".AC">Acre</option>
-                <option value=".AL">Alagoas</option>
-                <option value=".AP">Amapá</option>
-                <option value=".AM">Amazonas</option>
-                <option value=".BA">Bahia</option>
-                <option value=".CE">Ceará</option>
-                <option value=".DF">Distrito Federal</option>
-                <option value=".ES">Espírito Santo</option>
-                <option value=".GO">Goiás</option>
-                <option value=".MA">Maranhão</option>
-                <option value=".MT">Mato Grosso</option>
-                <option value=".MS">Mato Grosso do Sul</option>
-                <option value=".MG">Minas Gerais</option>
-                <option value=".PA">Pará</option>
-                <option value=".PB">Paraíba</option>
-                <option value=".PR">Paraná</option>
-                <option value=".PE">Pernambuco</option>
-                <option value=".PI">Piauí</option>
-                <option value=".RJ">Rio de Janeiro</option>
-                <option value=".RN">Rio Grande do Norte</option>
-                <option value=".RS">Rio Grande do Sul</option>
-                <option value=".RO">Rondônia</option>
-                <option value=".RR">Roraima</option>
-                <option value=".SC">Santa Catarina</option>
-                <option value=".SP">São Paulo</option>
-                <option value=".SE">Sergipe</option>
-                <option value=".TO">Tocantins</option>
-              </select>
-              <select class="grid-filter__input" name="cidades" id="cidades">
-                <option value="" selected disabled>Cidade</option>
-                <option value="*">Todas</option>
-                <option value=".curitiba">Curitiba</option>
-                <option value=".sao-paulo">São Paulo</option>
-                <option value=".rio-de-janeiro">Rio de Janeiro</option>
-              </select>
-              <select class="grid-filter__input" name="regiao">
-                <option value="*" selected disabled>Região</option>
-                <option value="regiao1">Região 1</option>
-                <option value="regiao2">Região 2</option>
-                <option value="regiao3">Região 3</option>
-              </select>
-              <select class="grid-filter__input" name="bairro">
-                <option value="" selected disabled>Bairro</option>
-                <option value="bairro1">Bairro 1</option>
-                <option value="bairro2">Bairro 2</option>
-                <option value="bairro3">Bairro 3</option>
-              </select>
+          <div class="row">
+            <div class="col-md-10 col-lg-7">
+              <p class="section__subtitle">FRANQUIAS BMZ AUTOBROKERS</p>
+              <h2 class="franqueado__title section__title--big">Seja um franqueado e faça parte da primeira rede de corretores de automóveis do Brasil</h2>
             </div>
           </div>
-          <div class="grid">
-            <div class="autobroker js-grid" id="grid-autobrokers">
-              <!-- <a class="autobroker__item" href="#!">
-                <div class="autobroker__img" style="background-image: url(assets/img/brokers/man1.jpg)"></div>
-                <div class="autobroker__content">
-                  <small class="autobroker__cat">autobroker bmz</small>
-                  <h5 class="autobroker__title">John Brown</h5>
-                  <p class="autobroker__city">São Paulo - SP</p>
+          <div class="row franqueado__right">
+            <div class="col-lg-6">
+              <h2 class="franqueado__title franqueado__form-title">Interessado? Deixe seus dados que entramos em contato com você:</h2>
+              <form method="POST" class="form">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form__control">
+                      <input type="text" placeholder="Nome">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form__control">
+                      <input type="text" placeholder="E-mail">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form__control">
+                      <input type="text" placeholder="Telefone">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form__control">
+                      <select name="estados" id="estados">
+                        <option value="" selected disabled>Estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form__control">
+                      <select name="investimento" id="investimento">
+                        <option value="" selected disabled>Investimento</option>
+                        <option value="investimento1">Investimento 1</option>
+                        <option value="investimento2">Investimento 2</option>
+                        <option value="investimento3">Investimento 3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form__control">
+                      <textarea cols="30" rows="15" placeholder="Descreva seus interesses e experiências"></textarea>
+                    </div>
+                  </div>
                 </div>
-              </a> -->
-
+                <div class="row">
+                  <div class="col-12 d-flex">
+                    <input type="submit" value="Enviar" class="form__submit ml-auto">
+                  </div>
+                </div>
+              </form>
             </div>
-            <footer class="grid__footer">
-              <!-- <div class="button-group">
-                <button class="button js-load-more">carregar</button>
-                <a class="button button--gray">entrar em contato</a>
-              </div> -->
-            </footer>
+          </div>
         </div>
       </section>
+
+      <section class="lead section section--pt-0">
+        <div class="container">
+          <h2 class="section__title section__title--big section__title--center">
+            Por que contratar um AutoBroker?
+          </h2>
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <div class="lead__item">
+                <img class="lead__img" src="assets/img/icons/shield.svg" alt="Segurança">
+                <h4 class="lead__title">Segurança</h4>
+                <p class="lead__text">Maecenas elit sem, dignissim at sem eu, egestas porttitor dolor. Vivamus ullamcorper vestibulum</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="lead__item">
+                <img class="lead__img" src="assets/img/icons/paper.svg" alt="Comodidade">
+                <h4 class="lead__title">Comodidade</h4>
+                <p class="lead__text">Maecenas elit sem, dignissim at sem eu, egestas porttitor dolor. Vivamus ullamcorper vestibulum</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="lead__item">
+                <img class="lead__img" src="assets/img/icons/clock.svg" alt="Ganhe tempo">
+                <h4 class="lead__title">Ganhe tempo</h4>
+                <p class="lead__text">Maecenas elit sem, dignissim at sem eu, egestas porttitor dolor. Vivamus ullamcorper vestibulum</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="lead__item">
+                <img class="lead__img" src="assets/img/icons/diamond.svg" alt="Ganhe tempo">
+                <h4 class="lead__title">Ganhe tempo</h4>
+                <p class="lead__text">Maecenas elit sem, dignissim at sem eu, egestas porttitor dolor. Vivamus ullamcorper vestibulum</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="how section section--gray">
+        <div class="container">
+          <h3 class="section__title section__title--center">Entenda como funciona a BMZ AutoBrokers</h3>
+          <div class="video">
+            <iframe width="100%" height="420" src="https://www.youtube.com/embed/tZaY-nvLwkE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="section rede">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8"><h2 class="section__title section__title--center">Faça parte dessa rede e torne-se um Autobroker de sucesso</h2></div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <img src="assets/img/mapa.jpg" alt="Rede Referenciada" class="rede__mapa">
+            </div>
+            <div class="col-md-6">
+              <img src="assets/img/maior-rede.jpg" alt="Maior Rede de Autobrokers do Brasil" class="rede__img">
+
+              <div class="rede__slider js-rede-slider">
+                <div class="rede__item">
+                  <p class="rede__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                  <p class="rede__author">- Ayrton Senna, Piloto Profissional</p>
+                </div>
+                <div class="rede__item">
+                  <p class="rede__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                  <p class="rede__author">- Ayrton Senna, Piloto Profissional</p>
+                </div>
+                <div class="rede__item">
+                  <p class="rede__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                  <p class="rede__author">- Ayrton Senna, Piloto Profissional</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="rede__footer">
+                <div class="button-group"><button class="button">entrar em contato</button><a class="button button--gray" href="fale-conosco.html">solicitar informações</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
     <footer class="footer">
       <div class="container">
@@ -276,9 +367,9 @@
               <div class="footer__social">
                 <h6>Siga nossas redes sociais</h6>
                 <ul>
-                  <li><a href="#!"><img src="assets/img/icons/facebook.svg" alt="Facebook"></a></li>
-                  <li><a href="#!"><img src="assets/img/icons/instagram.svg" alt="Instagram"></a></li>
-                  <li><a href="#!"><img src="assets/img/icons/whatsapp.svg" alt="WhatsApp"></a></li>
+                  <li><a href="#!" target="_blank" rel="noopener noreferrer"><img src="assets/img/icons/facebook.svg" alt="Facebook"></a></li>
+                  <li><a href="#!" target="_blank" rel="noopener noreferrer"><img src="assets/img/icons/instagram.svg" alt="Instagram"></a></li>
+                  <li><a href="#!" target="_blank" rel="noopener noreferrer"><img src="assets/img/icons/whatsapp.svg" alt="WhatsApp"></a></li>
                 </ul>
               </div>
             </div>

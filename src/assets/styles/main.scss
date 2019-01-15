@@ -185,3 +185,46 @@ img {
     }
   }
 }
+
+.franqueado {
+
+  @include media(">=tablet") {
+    background: -190px 150px / contain no-repeat url("../img/seja-franqueado.jpg");
+  }
+
+  @include media(">=desktop") {
+    background: center 150px / contain no-repeat url("../img/seja-franqueado.jpg");
+  }
+
+  @include media(">=wide") {
+    padding-bottom: 210px;
+  }
+
+  &__title {
+    color: color(blue, matisse);
+    font-size: 26px;
+    font-weight: fw("bold");
+    margin-bottom: 25px;
+
+    @include media(">=desktop") {
+      font-size: 44px;
+    }
+  }
+
+  &__form-title {
+    color: color(blue, matisse);
+    font-size: 26px;
+    font-weight: fw("bold");
+    margin-bottom: 25px;
+
+    @include media(">=desktop") {
+      font-size: 44px;
+    }
+  }
+
+  &__right {
+    @include media(">=desktop") {
+      justify-content: flex-end;
+    }
+  }
+}

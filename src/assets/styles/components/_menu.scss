@@ -55,6 +55,7 @@
 
   &__link {
     color: color(blue, matisse);
+    display: block;
 
     @include media(">=desktop") {
       color: color(mono, white);
@@ -105,6 +106,20 @@
       @include media(">=desktop") {
         svg {
           fill: color(mono, white);
+        }
+      }
+    }
+
+    &--active {
+      background-color: color(mono, white);
+      border-radius: 5px;
+
+      .menu__link {
+        color: color(blue, matisse);
+        padding: 10px;
+
+        &::after {
+          display: none;
         }
       }
     }
