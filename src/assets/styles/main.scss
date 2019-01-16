@@ -38,6 +38,12 @@ img {
   display: none !important;
 }
 
+.video {
+  border-radius: 10px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .search {
   &__form {
     .input {

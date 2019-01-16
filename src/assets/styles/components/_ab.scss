@@ -1,0 +1,190 @@
+.ab {
+  &__info {
+    padding-left: 15px;
+    flex-grow: 1;
+
+    @include media(">=tablet") {
+    }
+
+    @include media(">=desktop") {
+      padding-left: 0;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    font-weight: wrap;
+
+    @include media(">=tablet") {
+      flex: 1;
+    }
+
+    @include media(">=desktop") {
+      display: block;
+    }
+  }
+
+  &__photo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    display: inline-block;
+    height: 95px;
+    max-width: 100%;
+    width: 95px;
+
+    @include media(">=desktop") {
+      height: 215px;
+      margin-bottom: 20px;
+      width: 215px;
+    }
+  }
+
+  &__progress {
+    appearance: none;
+    background-size: auto;
+    border: none;
+    height: 9px;
+    width: 100%;
+
+    @include media(">=desktop") {
+      margin-bottom: 10px;
+    }
+  }
+
+  progress {
+    border-radius: 10px;
+    color: color(blue, matisse);
+  }
+  progress::-webkit-progress-bar {
+      border-radius: 10px;
+  }
+  progress::-webkit-progress-value {
+      border-radius: 10px;
+  }
+  progress::-moz-progress-bar {
+      border-radius: 10px;
+  }
+
+  progress::-webkit-progress-value {
+    background: color(blue, matisse);
+  }
+  progress::-moz-progress-bar {
+    background: color(blue, matisse);
+  }
+
+  &__reputation {
+    margin-bottom: 8px;
+
+    small {
+      color: color(blue, matisse);
+      display: block;
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+  }
+
+  &__tel {
+    color: color(blue, matisse);
+    font-size: 16px;
+    font-weight: fw("bold");
+    margin-bottom: 8px;
+
+    button {
+      margin-left: 5px;
+    }
+
+    span {
+      display: none;
+    }
+
+    @include media(">=desktop") {
+      display: flex;
+      font-size: 27px;
+      justify-content: space-between;
+    }
+
+    @include media(">=wide") {
+    }
+  }
+
+  &__social {
+    display: flex;
+    margin-bottom: 8px;
+
+    @include media(">=desktop") {
+      justify-content: space-between;
+    }
+
+    li {
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    svg {
+      height: 30px;
+
+      path {
+        fill: color(blue, matisse);
+      }
+    }
+  }
+
+  &__desc {
+    @include media(">=tablet") {
+      flex: 1;
+      padding-left: 30px;
+    }
+
+    @include media(">=desktop") {
+      padding-left: 0;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    .button {
+      display: block;
+      margin-bottom: 10px;
+
+      @include media(">=tablet") {
+        display: inline-block;
+        margin-right: 15px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__top {
+
+    @include media(">=tablet", "<desktop") {
+      display: flex;
+    }
+  }
+
+  &__left {
+    padding: 0 15px;
+    width: 100%;
+
+    @include media(">=desktop") {
+      width: 245px;
+    }
+  }
+
+  &__right {
+    padding: 0 15px;
+    width: 100%;
+
+    @include media(">=desktop") {
+      width: calc(100% - 245px);
+    }
+  }
+}

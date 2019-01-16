@@ -6,6 +6,24 @@
     padding: 70px 0;
   }
 
+  &__content {
+    p {
+      color: color(gray, dove-gray);
+      margin-bottom: 25px;
+      line-height: 1.5;
+      font-size: 16px;
+
+      @include media(">=desktop") {
+        font-size: 22px;
+      }
+    }
+
+    a {
+      color: color(blue, matisse);
+      text-decoration: underline;
+    }
+  }
+
   &__title {
     color: color(blue, matisse);
     font-size: 22px;
@@ -32,6 +50,10 @@
     &--right {
       text-align: right;
     }
+
+    &--mb-0 {
+      margin-bottom: 0;
+    }
   }
 
   &__subtitle {
@@ -49,6 +71,17 @@
     }
   }
 
+  &__description {
+    color: color(blue, matisse);
+    font-size: 18px;
+    margin-bottom: 15px;
+
+    @include media(">=desktop") {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  }
+
   &__text {
     color: color(gray, dove-gray);
     font-size: 16px;
@@ -56,6 +89,11 @@
     @include media(">=desktop") {
       font-size: 32px;
     }
+  }
+
+  &__video {
+    margin: 0 auto 45px;
+    max-width: 970px;
   }
 
   &--pb-0 {
