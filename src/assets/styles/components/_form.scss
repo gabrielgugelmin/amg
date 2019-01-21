@@ -109,6 +109,7 @@
   }
 }
 
+input[type=search],
 input[type=text],
 input[type=email],
 input[type=tel],
@@ -155,7 +156,7 @@ $radio-unchecked-color: $checkbox-border-color-unchecked;
 input[type=checkbox] {
   display: none;
 
-  @mixin checkbox-structure($width: 36px, $height: 36px, $top: -1px, $left: '', $border-color: '', $background-color: '') {
+  @mixin checkbox-structure($width: 32px, $height: 32px, $top: -1px, $left: '', $border-color: '', $background-color: '') {
     content: "";
     height: $height;
     position: absolute;
@@ -172,6 +173,11 @@ input[type=checkbox] {
     }
 
     transition: .2s;
+
+    @include media(">=desktop") {
+      height: $height + 4;
+      width: $width + 4;
+    }
   }
 
   &:not(:checked) + label::before {
@@ -205,11 +211,12 @@ input[type=radio] + label {
   cursor: pointer;
   font-size: 16px;
   font-style: italic;
-  padding-left: 56px;
+  padding-left: 42px;
   position: relative;
 
   @include media(">=desktop") {
     font-size: 22px;
+    padding-left: 56px;
   }
 }
 

@@ -125,25 +125,18 @@ img {
   }
 }
 
-.meet {
-  .autobroker {
-    margin-bottom: 40px;
-    margin-top: 40px;
-
-    @include media(">=desktop") {
-      margin-bottom: 85px;
-      margin-top: 85px;
-    }
-  }
-}
-
 .grid {
+
+  &--mt {
+    margin-top: 60px;
+  }
+
   &__footer {
     padding-top: 40px;
 
     .button-group {
       margin: 0 auto;
-      max-width: 470px;
+      max-width: 500px;
     }
   }
 

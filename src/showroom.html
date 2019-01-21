@@ -102,71 +102,47 @@
 
       <section class="section">
         <div class="container">
-          <h2 class="section__title secton__title--center">Encontre um Autobroker</h2>
+          <h2 class="section__title secton__title--center">Encontre o veículo ideal</h2>
           <div class="grid-search">
             <div class="form__control form__control--icon">
-              <input type="search" class="input quicksearch" placeholder="Buscar por nome ou termo">
+              <input type="search" class="input quicksearch" placeholder="O que você procura?">
               <button>
                 <img src="assets/img/icons/search.svg" alt="Procurar" class="icon">
               </button>
             </div>
             <div class="grid-filter">
-              <select class="grid-filter__input" name="estados" id="estados">
-                <option value="" selected disabled>Estado</option>
-                <option value="*">Todos</option>
-                <option value=".AC">Acre</option>
-                <option value=".AL">Alagoas</option>
-                <option value=".AP">Amapá</option>
-                <option value=".AM">Amazonas</option>
-                <option value=".BA">Bahia</option>
-                <option value=".CE">Ceará</option>
-                <option value=".DF">Distrito Federal</option>
-                <option value=".ES">Espírito Santo</option>
-                <option value=".GO">Goiás</option>
-                <option value=".MA">Maranhão</option>
-                <option value=".MT">Mato Grosso</option>
-                <option value=".MS">Mato Grosso do Sul</option>
-                <option value=".MG">Minas Gerais</option>
-                <option value=".PA">Pará</option>
-                <option value=".PB">Paraíba</option>
-                <option value=".PR">Paraná</option>
-                <option value=".PE">Pernambuco</option>
-                <option value=".PI">Piauí</option>
-                <option value=".RJ">Rio de Janeiro</option>
-                <option value=".RN">Rio Grande do Norte</option>
-                <option value=".RS">Rio Grande do Sul</option>
-                <option value=".RO">Rondônia</option>
-                <option value=".RR">Roraima</option>
-                <option value=".SC">Santa Catarina</option>
-                <option value=".SP">São Paulo</option>
-                <option value=".SE">Sergipe</option>
-                <option value=".TO">Tocantins</option>
-              </select>
-              <select class="grid-filter__input" name="cidades" id="cidades">
-                <option value="" selected disabled>Cidade</option>
+              <select class="grid-filter__input" name="marcas" id="marcas">
+                <option value="" selected disabled>Marca</option>
                 <option value="*">Todas</option>
-                <option value=".curitiba">Curitiba</option>
-                <option value=".sao-paulo">São Paulo</option>
-                <option value=".rio-de-janeiro">Rio de Janeiro</option>
+                <option value=".mercedes-benz">mercedes-benz</option>
+                <option value=".audi">audi</option>
+                <option value=".ferrari">ferrari</option>
               </select>
-              <select class="grid-filter__input" name="regioes" id="regioes">
-                <option value="" selected disabled>Região</option>
-                <option value="*">Todas</option>
-                <option value=".regiao1">Região 1</option>
-                <option value=".regiao2">Região 2</option>
-                <option value=".regiao3">Região 3</option>
-              </select>
-              <select class="grid-filter__input" name="bairros" id="bairros">
-                <option value="" selected disabled>Bairro</option>
+              <select class="grid-filter__input" name="modelos" id="modelos">
+                <option value="" selected disabled>Modelo</option>
                 <option value="*">Todos</option>
-                <option value=".bairro1">Bairro 1</option>
-                <option value=".bairro2">Bairro 2</option>
-                <option value=".bairro3">Bairro 3</option>
+                <option value=".modelo1">modelo 1</option>
+                <option value=".modelo2">modelo 2</option>
+                <option value=".modelo3">modelo 3</option>
+              </select>
+              <select class="grid-filter__input" name="anos" id="anos">
+                <option value="" selected disabled>Ano</option>
+                <option value="*">Qualquer</option>
+                <option value=".ano1">Ano 1</option>
+                <option value=".ano2">Ano 2</option>
+                <option value=".ano3">Ano 3</option>
+              </select>
+              <select class="grid-filter__input" name="precos" id="precos">
+                <option value="" selected disabled>Preço</option>
+                <option value="*">Qualquer</option>
+                <option value="10000" data-filter-min="10000" data-filter-max="20000">De 10.000 até 20.000</option>
+                <option value=".preco2" data-filter-min="20001" data-filter-max="50000">De 20.000 até 50.000</option>
+                <option value=".preco3" data-filter-min="50001">Mais que 50.000</option>
               </select>
             </div>
           </div>
           <div class="grid">
-            <div class="autobroker js-grid" id="grid-autobrokers" data-init-show="6" data-label-primary="carregar" data-label-secondary="entrar em contato" data-link="contato.html"  data-load="autobrokers">
+            <div class="car js-grid" data-init-show="10" data-label-primary="carregar" data-label-secondary="entrar em contato" data-link="contato.html"  data-load="cars">
               <!-- <a class="autobroker__item" href="#!">
                 <div class="autobroker__img" style="background-image: url(assets/img/brokers/man1.jpg)"></div>
                 <div class="autobroker__content">

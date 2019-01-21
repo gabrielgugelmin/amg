@@ -9,7 +9,7 @@
     color: color(blue, matisse);
     display: flex;
     flex-direction: row;
-    flex-basis: 100%;
+    // flex-basis: 100%;
     margin-bottom: 8px;
     // max-width: 400px;
     padding: 15px;
@@ -99,6 +99,16 @@
     @include media(">=desktop") {
       height: 156px;
       width: 152px;
+    }
+  }
+
+  &--margin {
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+    @include media(">=desktop") {
+      margin-bottom: 85px;
+      margin-top: 85px;
     }
   }
 }

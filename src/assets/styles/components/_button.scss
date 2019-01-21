@@ -48,6 +48,8 @@
 
     .button {
       font-size: 16px;
+      padding-left: 30px;
+      padding-right: 30px;
 
       @include media(">=desktop") {
         font-size: 18px;
@@ -62,7 +64,7 @@
           border-bottom-right-radius: 0;
           border-top-left-radius: 5px;
           border-top-right-radius: 0;
-          flex: .55;
+          flex: 1;
         }
       }
 

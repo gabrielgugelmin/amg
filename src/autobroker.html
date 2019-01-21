@@ -102,13 +102,10 @@
 
       <section class="section ab">
         <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <p class="section__subtitle">AUTOBROKERS</p>
-              <h2 class="section__title section__title--big section__title--mb-0">John Alexander Brown</h2>
-              <p class="section__description">São Paulo - SP</p>
-            </div>
-          </div>
+          <p class="section__subtitle">AUTOBROKERS</p>
+          <h2 class="section__title section__title--big section__title--mb-0">John Alexander Brown</h2>
+          <p class="section__description">São Paulo - SP</p>
+
           <div class="row">
             <div class="ab__left ab__top">
               <div class="ab__profile">
@@ -146,7 +143,7 @@
                 <p>
                   Solicite assessoria de Jhown Brown para comprar ou vender um veículo
                 </p>
-                <a href="#!" class="button button--xs">Compre um veículo</a><a href="#!" class="button button--xs">Vender um veículo</a>
+                <a href="#!" class="button">Comprar um veículo</a><a href="#!" class="button">Vender um veículo</a>
               </div>
             </div>
             <div class="ab__right">
@@ -162,6 +159,152 @@
                 <div class="video">
                   <iframe width="100%" height="360" src="https://www.youtube.com/embed/tZaY-nvLwkE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+              </div>
+
+              <form method="POST" class="form">
+                <h3 class="form__title">Entre em contato com nossa central de atendimento</h3>
+
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form__control">
+                      <input type="text" placeholder="Nome">
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="form__control">
+                      <input type="text" placeholder="E-mail">
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="form__control">
+                      <input type="text" placeholder="Telefone">
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="form__control">
+                      <select>
+                        <option value="" selected disabled>Assunto</option>
+                        <option value="assunto1">Assunto 1</option>
+                        <option value="assunto2">Assunto 2</option>
+                        <option value="assunto3">Assunto 3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form__control">
+                      <textarea cols="30" rows="15" placeholder="Deixe uma mensagem:"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row align-items-center">
+                  <div class="col-12 col-sm-8">
+                    <div class="form__control">
+                      <input id="newsletter" type="checkbox"/>
+                      <label for="newsletter">Assina newsletter de John A. Brown</label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-4 d-flex">
+                    <input type="submit" value="Enviar" class="form__submit ml-auto">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="section section--big">
+            <h2 class="section__title section__title--big section__title--center">Conheça o portfólio de veículos de Jhon A. Brown</h2>
+            <p class="section__subtitle section__subtitle--center">Maecenas elit sem, dignissim at sem eu, egestas porttitor dolor.<br>Vivamus ullamcorper vestibulum risus ac feugiat. </p>
+
+            <div class="grid grid--mt">
+              <div class="car js-grid" data-init-show="8" data-label-primary="mais de john brown"  data-label-secondary="estoque completo" data-link="showroom.html" data-load="cars">
+                <!-- <div class="car__item grid__item">
+                  <header class="car__header">
+                    <p>mercedes-benz</p>
+                  </header>
+                  <div class="car__img" style="background-image: url(assets/img/cars/c1.jpg)"></div>
+                  <div class="car__box">
+                    <h4 class="car__title">GLA 200 1.6 CGI STYLE 16V TURBO FLEX 4P AUTOMÁTICO 2015/2016</h4>
+
+                    <div class="car__detail">
+                      <div class="car__text">
+                        <p>Autobroker: Marcio Leitão</p>
+                        <p>Local: São Paulo - SP</p>
+                      </div>
+                      <h5 class="car__price">R$ 89.000,00</h5>
+                    </div>
+                  </div>
+                  <footer class="car__footer">
+                    <button class="button">Ver detalhes</button>
+                  </footer>
+                </div> -->
+              </div>
+              <footer class="grid__footer">
+                <!-- <div class="button-group">
+                  <button class="button js-load-more">MAIS DE JHON BROWN</button>
+                  <a class="button button--gray">Estoque completo</a>
+                </div> -->
+              </footer>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section__title section__title--big section__title--center">Conheça outros AutoBroker’s da região de São Paulo</h2>
+            <p class="section__subtitle section__subtitle--center">Maecenas elit sem, dignissim at sem eu, egestas porttitor dolor.<br>Vivamus ullamcorper vestibulum risus ac feugiat. </p>
+
+            <div class="autobroker autobroker--margin">
+              <a class="autobroker__item" href="#!">
+                <div class="autobroker__img" style="background-image: url(assets/img/brokers/man1.jpg)"></div>
+                <div class="autobroker__content">
+                  <small class="autobroker__cat">autobroker bmz</small>
+                  <h5 class="autobroker__title">John Brown</h5>
+                  <p class="autobroker__city">São Paulo - SP</p>
+                </div>
+              </a>
+              <a class="autobroker__item" href="#!">
+                <div class="autobroker__img" style="background-image: url(assets/img/brokers/man1.jpg)"></div>
+                <div class="autobroker__content">
+                  <small class="autobroker__cat">autobroker bmz</small>
+                  <h5 class="autobroker__title">John Brown</h5>
+                  <p class="autobroker__city">São Paulo - SP</p>
+                </div>
+              </a>
+              <a class="autobroker__item" href="#!">
+                <div class="autobroker__img" style="background-image: url(assets/img/brokers/man1.jpg)"></div>
+                <div class="autobroker__content">
+                  <small class="autobroker__cat">autobroker bmz</small>
+                  <h5 class="autobroker__title">John Brown</h5>
+                  <p class="autobroker__city">São Paulo - SP</p>
+                </div>
+              </a>
+              <a class="autobroker__item" href="#!">
+                <div class="autobroker__img" style="background-image: url(assets/img/brokers/man1.jpg)"></div>
+                <div class="autobroker__content">
+                  <small class="autobroker__cat">autobroker bmz</small>
+                  <h5 class="autobroker__title">John Brown</h5>
+                  <p class="autobroker__city">São Paulo - SP</p>
+                </div>
+              </a>
+              <a class="autobroker__item" href="#!">
+                <div class="autobroker__img" style="background-image: url(assets/img/brokers/man1.jpg)"></div>
+                <div class="autobroker__content">
+                  <small class="autobroker__cat">autobroker bmz</small>
+                  <h5 class="autobroker__title">John Brown</h5>
+                  <p class="autobroker__city">São Paulo - SP</p>
+                </div>
+              </a>
+              <a class="autobroker__item" href="#!">
+                <div class="autobroker__img" style="background-image: url(assets/img/brokers/man1.jpg)"></div>
+                <div class="autobroker__content">
+                  <small class="autobroker__cat">autobroker bmz</small>
+                  <h5 class="autobroker__title">John Brown</h5>
+                  <p class="autobroker__city">São Paulo - SP</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-12">
+              <div class="row justify-content-center">
+                <a href="autobrokers.html" class="button">ver todos</a>
               </div>
             </div>
           </div>

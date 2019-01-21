@@ -5,7 +5,7 @@
     "estado": "SP",
     "cidade": "São Paulo",
     "regiao": "regiao1",
-    "bairro": "bairro 1",
+    "bairro": "bairro1",
     "img": "assets/img/brokers/man1.jpg",
     "categoria": "autobroker bmz"
   },
@@ -15,7 +15,7 @@
     "estado": "RJ",
     "cidade": "Rio de Janeiro",
     "regiao": "regiao2",
-    "bairro": "bairro 3",
+    "bairro": "bairro3",
     "img": "assets/img/brokers/man1.jpg",
     "categoria": "autobroker bmz"
   },
@@ -25,7 +25,7 @@
     "estado": "PR",
     "cidade": "Curitiba",
     "regiao": "regiao3",
-    "bairro": "bairro 3",
+    "bairro": "bairro3",
     "img": "assets/img/brokers/man1.jpg",
     "categoria": "autobroker bmz"
   },
@@ -35,7 +35,7 @@
     "estado": "SP",
     "cidade": "São Paulo",
     "regiao": "regiao2",
-    "bairro": "bairro 1",
+    "bairro": "bairro1",
     "img": "assets/img/brokers/man1.jpg",
     "categoria": "autobroker bmz"
   },
@@ -45,7 +45,7 @@
     "estado": "SP",
     "cidade": "São Paulo",
     "regiao": "regiao2",
-    "bairro": "bairro 2",
+    "bairro": "bairro2",
     "img": "assets/img/brokers/man1.jpg",
     "categoria": "autobroker bmz"
   },
@@ -55,7 +55,7 @@
     "estado": "RJ",
     "cidade": "Rio de Janeiro",
     "regiao": "regiao2",
-    "bairro": "bairro 2",
+    "bairro": "bairro2",
     "img": "assets/img/brokers/man1.jpg",
     "categoria": "autobroker bmz"
   },
@@ -65,7 +65,7 @@
     "estado": "SP",
     "cidade": "São Paulo",
     "regiao": "regiao2",
-    "bairro": "bairro 1",
+    "bairro": "bairro1",
     "img": "assets/img/brokers/man1.jpg",
     "categoria": "autobroker bmz"
   },
@@ -75,7 +75,7 @@
     "estado": "PR",
     "cidade": "Curitiba",
     "regiao": "regiao2",
-    "bairro": "bairro 3",
+    "bairro": "bairro3",
     "img": "assets/img/brokers/man1.jpg",
     "categoria": "autobroker bmz"
   }
