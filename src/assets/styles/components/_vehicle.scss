@@ -1,0 +1,19 @@
+.vehicle {
+  &__title {
+    color: color(blue, matisse);
+    margin-bottom: 10px;
+    font-weight: fw("bold");
+
+    @include media(">=tablet") {
+      font-size: 18px;
+    }
+
+    @include media(">=desktop") {
+      font-size: 18px;
+    }
+
+    @include media(">=wide") {
+      font-size: 25px;
+    }
+  }
+}

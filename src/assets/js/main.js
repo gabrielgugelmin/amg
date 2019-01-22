@@ -73,6 +73,48 @@ $(function () {
     smoothScroll();
   });
 
+  // REVELA O TELEFONE
+  $('.js-tel-reveal').on('click', function() {
+    $(this).prev().contents().unwrap();
+    $(this).prev().addClass('visible');
+    $(this).remove();
+  });
+
+  // SLIDER PRODUTO
+
+  $('.js-vehicle-slider').slick({
+    slidesToShow: 1,
+    dots: false,
+    slidesToScroll: 1,
+    asNavFor: '.slider-nav',
+    prevArrow: '<button type="button" class="slider__button slider__button--prev"></button>',
+    nextArrow: '<button type="button" class="slider__button slider__button--next"></button>',
+    fade: true
+  });
+
+  $('.js-vehicle-nav').slick({
+    arrows: false,
+    dots: false,
+    asNavFor: '.js-vehicle-slider',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    centerMode: false,
+    infinite: true,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false
+        }
+      }
+    ]
+  });
+
   if ($('.js-grid').length) {
     getItems();
   }
@@ -96,6 +138,9 @@ $(function () {
     var $container = $('.js-grid').isotope({
       itemSelector: '.grid__item',
       layoutMode: 'fitRows',
+      getSortData: {
+        valor: '[data-valor] parseInt',
+      },
       filter: function () {
         var $this = $(this);
         var searchResult = qsRegex ? $this.text().match(qsRegex) : true;
@@ -189,32 +234,36 @@ $(function () {
       $container.isotope();
     });
 
-    // Filtra os itens pelo Estado
+    // Filtra os itens pela Marca
     $('#marcas').on('change', function () {
       marcasFilter = this.value;
       loadMore(1000);
       $container.isotope();
     });
 
-    // Filtra os itens pela Cidade
+    // Filtra os itens pelo Modelo
     $('#modelos').on('change', function () {
       modelosFilter = this.value;
       loadMore(1000);
       $container.isotope();
     });
 
-    // Filtra os itens pela Região
+    // Filtra os itens por Ano
     $('#anos').on('change', function () {
       anosFilter = this.value;
       loadMore(1000);
       $container.isotope();
     });
 
-    // Filtra os itens pela Cidade
+    // Ordena os itens por ordem crescente ou decrescente
     $('#precos').on('change', function () {
-      precosFilter = this.value;
+      var filterValue = this.value;
+      var order = $(this).find(":selected").data('ordem');
       loadMore(1000);
-      $container.isotope();
+      $container.isotope({
+        sortBy: filterValue,
+        sortAscending: order,
+      });
     });
 
     // Filtra os itens de acordo com o digitado na busca
@@ -267,7 +316,7 @@ function getItemLayout(contentToLoad, item) {
       '</div>' +
     '</a>';
   } else if (contentToLoad === 'cars') {
-    return '<div class="car__item grid__item ' + slugify(item.brand) + ' ' + slugify(item.modelo) + ' ' + slugify(item.ano) + ' ' + slugify(item.preco) + '">' +
+    return '<div class="car__item grid__item ' + slugify(item.brand) + ' ' + slugify(item.modelo) + ' ' + slugify(item.ano) + '"data-valor="' + item.preco + '">' +
       '<header class="car__header">' +
       '<p>' + item.brand + '</p>' +
     '</header>' +

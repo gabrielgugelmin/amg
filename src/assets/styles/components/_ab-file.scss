@@ -1,0 +1,119 @@
+.ab-file {
+  background-color: color(gray, gallery);
+  border-radius: 8px;
+  color: color(blue, matisse);
+  display: flex;
+  padding: 15px 15px 60px;
+
+  @include media(">=tablet") {
+    padding-bottom: 15px;
+  }
+
+  &__photo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    display: inline-block;
+    flex-shrink: 0;
+    height: 80px;
+    max-width: 100%;
+    width: 80px;
+
+    @include media(">=tablet") {
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    letter-spacing: ls(14, 100);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+
+    @include media(">=desktop") {
+      font-size: 17px;
+      letter-spacing: ls(17, 100);
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: fw("semibold");
+    letter-spacing: ls(20, 100);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+
+    @include media(">=desktop") {
+      font-size: 30px;
+      letter-spacing: ls(30, 100);
+      margin-bottom: 0;
+    }
+  }
+
+  &__location {
+    font-size: 14px;
+
+    @include media(">=desktop") {
+      font-size: 22px;
+    }
+  }
+
+  &__info {
+    flex-grow: 1;
+    padding-left: 15px;
+  }
+
+  &__tel {
+    bottom: 15px;
+    font-size: 20px;
+    font-weight: fw("bold");
+    left: 0;
+    letter-spacing: ls(20, 50);
+    padding-top: 20px;
+    position: absolute;
+    right: 15px;
+    text-align: center;
+
+    @include media(">=tablet") {
+      position: relative;
+      left: inherit;
+      right: inherit;
+      bottom: inherit;
+      text-align: right;
+    }
+
+    @include media(">=desktop") {
+      display: flex;
+      font-size: 37px;
+      justify-content: flex-end;
+      letter-spacing: ls(37, 50);
+    }
+
+    button {
+      margin-left: 5px;
+      padding: 8px 15px;
+      font-size: 14px;
+      font-weight: fw("semibold");
+      border-radius: 10px;
+
+      @include media(">=tablet") {
+        padding: 8px 15px;
+      }
+
+      @include media(">=desktop") {
+        font-size: 17px;
+      }
+    }
+
+    span {
+      display: none;
+
+      &.visible {
+        display: inline-block;
+      }
+    }
+  }
+}

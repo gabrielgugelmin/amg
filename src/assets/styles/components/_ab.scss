@@ -97,6 +97,10 @@
 
     span {
       display: none;
+
+      &.visible {
+        display: inline-block;
+      }
     }
 
     @include media(">=desktop") {
