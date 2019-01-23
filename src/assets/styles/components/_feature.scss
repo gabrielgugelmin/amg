@@ -9,7 +9,7 @@
     @include media(">=desktop") {
       background-position: right center;
       background-size: contain;
-      height: 388px;
+      height: 300px;
     }
 
     &--white {
@@ -34,11 +34,11 @@
     }
 
     @include media(">=desktop") {
-      font-size: 32px;
+      font-size: 30px;
     }
 
-    @include media(">=wide") {
-      font-size: 48px;
-    }
+    // @include media(">=wide") {
+    //   font-size: 48px;
+    // }
   }
 }

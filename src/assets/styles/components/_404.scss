@@ -9,17 +9,7 @@
     font-weight: fw("light");
 
     @include media(">=desktop") {
-      font-size: 24px;
-    }
-  }
-
-  &__title {
-    color: color(blue, matisse);
-    font-weight: fw("bold");
-    font-size: 28px;
-
-    @include media(">=desktop") {
-      font-size: 48px;
+      font-size: 22px;
     }
   }
 
@@ -29,7 +19,7 @@
     margin: 40px auto;
 
     @include media(">=desktop") {
-      max-width: 100%;
+      max-width: 340px;
       margin: 80px 0 0 0;
     }
   }
@@ -40,8 +30,8 @@
     margin-bottom: 30px;
 
     @include media(">=desktop") {
-      font-size: 32px;
-      margin-bottom: 60px;
+      font-size: 18px;
+      // margin-bottom: 60px;
     }
   }
 

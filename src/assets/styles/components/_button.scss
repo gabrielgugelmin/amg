@@ -3,12 +3,14 @@
   border-radius: 5px;
   color: color(mono, white);
   cursor: pointer;
-  font-size: 22px;
+  display: inline-block;
+  font-size: 16px;
   font-weight: fw("regular");
-  padding: 18px 45px;
+  padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
   transition: background-color .2s ease;
+  line-height: 1;;
 
   &:focus {
     outline: 1px dashed color(mono, white);
@@ -33,9 +35,23 @@
   }
 
   &--xs {
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 13px;
     padding: 5px 12px;
+  }
+
+  &--gray {
+    background-color: color(gray, silver-chalice);
+  }
+
+  &--border-10 {
+    border-radius: 10px
+  }
+
+  &--md {
+    padding: 15px 30px;
+    text-transform: none;
+    font-weight: fw("semibold");
   }
 
   &-group {
@@ -48,8 +64,8 @@
 
     .button {
       font-size: 16px;
-      padding-left: 30px;
-      padding-right: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
 
       @include media(">=desktop") {
         font-size: 18px;

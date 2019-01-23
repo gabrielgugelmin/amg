@@ -4,9 +4,12 @@
   color: color(blue, matisse);
   display: flex;
   padding: 15px 15px 60px;
+  position: relative;
+  margin-bottom: 30px;
 
   @include media(">=tablet") {
     padding-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   &__photo {

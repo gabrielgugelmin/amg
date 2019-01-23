@@ -16,4 +16,109 @@
       font-size: 25px;
     }
   }
+
+  &__content {
+    padding: 60px 0;
+
+    p {
+      color: color(gray, dove-gray);
+      font-size: 16px;
+      line-height: 1.5;
+
+      // @include media(">=desktop") {
+      //   font-size: 22px;
+      // }
+    }
+  }
+
+  &__subtitle {
+    color: color(blue, matisse);
+    font-size: 18px;
+    margin-bottom: 30px;
+
+    @include media(">=desktop") {
+      font-size: 25px;
+    }
+  }
+
+  &__price {
+    color: color(mono, black);
+    font-size: 18px;
+    font-weight: fw("bold");
+    margin-bottom: 30px;
+    margin-top: 5px;
+
+    span {
+      color: color(gray, dusty-gray);
+    }
+
+    @include media(">=desktop") {
+      font-size: 30px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__info {
+    height: 300px;
+    position: relative;
+    padding-right: 20px;
+
+    @include media(">=desktop") {
+      height: 400px;
+    }
+
+    li {
+      border-bottom: 1px solid color(gray, silver);
+      color: color(gray, dove-gray);
+      display: flex;
+      font-size: 16px;
+      justify-content: space-between;
+      padding: 10px 0;
+      width: 100%;
+
+      @include media(">=desktop") {
+        font-size: 18px;
+      }
+
+      &:first-child {
+        border-top: 1px solid color(gray, silver);
+      }
+
+      span {
+        color: color(blue, matisse);
+      }
+    }
+  }
+
+  &__footer {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    > span {
+      align-self: center;
+      color: color(gray, dove-gray);
+      display: inline-flex;
+      font-size: 16px;
+      font-weight: fw("bold");
+      margin: 10px 0;
+
+      @include media(">=desktop") {
+        font-size: 22px;
+        margin: 10px 25px;
+      }
+    }
+
+    .button {
+      @include media(">=desktop") {
+        flex-grow: 1;
+      }
+    }
+
+    @include media(">=desktop") {
+      flex-direction: row;
+      margin: 0;
+    }
+  }
 }

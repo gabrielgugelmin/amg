@@ -66,7 +66,9 @@ $(function () {
 
 
   // SCROLLBAR
-  //$('.js-scrollbar').perfectScrollbar();
+  if ($('.js-scrollbar').length > 0) {
+    const ps = new PerfectScrollbar('.js-scrollbar');
+  }
 
   // SMOOTH SCROLL
   $('.js-scroll').on('click', function(event) {
@@ -332,7 +334,7 @@ function getItemLayout(contentToLoad, item) {
       '</div>' +
     '</div>' +
     '<footer class="car__footer">' +
-      '<button class="button">Ver detalhes</button>' +
+      '<a class="button" href=\'/autobroker/'+ slugify(item.title) +'/'+ item.id +'\'>Ver detalhes</a>' +
     '</footer>' +
   '</div>';
   }
