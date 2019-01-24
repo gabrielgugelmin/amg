@@ -11,20 +11,26 @@
   z-index: z("fixed");
 
   @include media(">=desktop") {
-    height: 100px;
-    padding: 15px 0;
+    height: 140px;
+    padding: 90px 0 15px;
   }
 
   &__logo {
-    margin-top: 15px;
+    // margin-top: 15px;
     width: 90px;
+
+    path,
+    polygon {
+      fill: color(mono, white);
+    }
 
     @include media(">=desktop") {
       margin-top: 0;
       display: inline-block;
       width: 120px;
 
-      path {
+      path,
+      polygon {
         fill: white;
       }
     }
@@ -43,15 +49,20 @@
   &--scrolling {
     background-color: color(mono, white);
     box-shadow: 0 1px 5px 2px rgba(color(mono, black), .3);
-    height: 64px;
+    height: 64px !important;
 
     .nav__logo {
       margin-top: 0;
       width: 70px;
+
+      path,
+      polygon {
+        fill: color(blue, matisse);
+      }
     }
 
     @include media(">=desktop") {
-      padding: 0;
+      padding: 0 !important;
 
       .menu__link {
         color: color(blue, matisse);
@@ -66,7 +77,8 @@
       .nav__logo {
         width: 80px;
 
-        path {
+        path,
+        polygon {
           fill: color(logo, matisse);
         }
       }
@@ -90,5 +102,9 @@
         }
       }
     }
+  }
+
+  &--small {
+    padding-top: 30px;
   }
 }

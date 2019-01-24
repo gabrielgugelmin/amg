@@ -1,9 +1,14 @@
 .footer {
   background: url("../img/marcas.png") repeat-x left calc(100% - 45px) color(blue, matisse);
   padding: 40px 0 80px;
+  text-align: center;
+
+  @include media(">=tablet") {
+    text-align: left;
+  }
 
   @include media(">=desktop") {
-    padding: 60px 0 200px;
+    padding: 60px 0 120px;
   }
 
   .form {
@@ -32,11 +37,19 @@
   &__forms {
     .form {
       margin-bottom: 30px;
+
+      @include media(">=desktop") {
+        margin-bottom: 60px;
+      }
     }
   }
 
   &__logo {
     margin-bottom: 30px;
+
+    @include media(">=desktop") {
+      margin-bottom: 60px;
+    }
 
     img {
       width: 120px;
@@ -47,11 +60,11 @@
     color: color(mono, white);
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
 
-    // @include media(">=wide") {
-    //   font-size: 18px;
-    // }
+    @include media(">=desktop") {
+      padding-right: 30px;
+    }
   }
 
   &__list {
@@ -64,6 +77,10 @@
 
   &__item {
     margin-bottom: 20px;
+
+    @include media(">=wide") {
+      margin-bottom: 35px;
+    }
   }
 
   &__link {
@@ -109,6 +126,11 @@
     ul {
       display: flex;
       flex-direction: row;
+      justify-content: center;
+
+      @include media(">=tablet") {
+        justify-content: flex-start;
+      }
 
       li {
         margin-right: 30px;
@@ -120,6 +142,10 @@
 
       img {
         height: 32px;
+
+        @include media(">=desktop") {
+          height: 42px;
+        }
       }
     }
   }

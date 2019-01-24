@@ -17,7 +17,7 @@ html, body {
     flex: 1;
 
     @include media(">=desktop") {
-      margin-top: 100px;
+      margin-top: 140px;
     }
   }
 
@@ -31,6 +31,19 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+  }
+}
+
+.inner {
+  @include media(">=desktop") {
+    .nav {
+      height: 100px;
+      padding-top: 30px;
+    }
+
+    .page-content {
+      margin-top: 100px;
+    }
   }
 }
 
@@ -62,6 +75,7 @@ img {
       }
 
       @include media(">=desktop") {
+        height: 60px;
         font-size: 24px;
       }
     }
@@ -84,9 +98,9 @@ img {
     max-width: 60px;
 
     @include media(">=desktop") {
-      height: 65px;
+      height: 85px;
       margin-bottom: 25px;
-      max-width: 65px;
+      max-width: 85px;
     }
   }
 
@@ -96,10 +110,10 @@ img {
     font-weight: fw("semibold");
     margin-bottom: 15px;
 
-    // @include media(">=desktop") {
-    //   font-size: 28px;
-    //   margin-bottom: 25px;
-    // }
+    @include media(">=desktop") {
+      font-size: 26px;
+      // margin-bottom: 25px;
+    }
   }
 
   &__text {
@@ -107,9 +121,9 @@ img {
     color: color(gray, dove-gray);
     letter-spacing: ls(50, 16);
 
-    // @include media(">=desktop") {
-    //   font-size: 22px;
-    // }
+    @include media(">=desktop") {
+      font-size: 20px;
+    }
   }
 
   .section__title {
@@ -200,8 +214,9 @@ img {
     background: center 120px / 840px no-repeat url("../img/seja-franqueado.jpg");
   }
 
-  @include media(">=wide") {
-    padding-bottom: 80px;
+  @include media(">=desktop") {
+    background: -30px 150px / 1300px no-repeat url("../img/seja-franqueado.jpg");
+    padding-bottom: 210px;
   }
 
   &__title {
@@ -210,9 +225,10 @@ img {
     font-weight: fw("bold");
     margin-bottom: 25px;
 
-    // @include media(">=desktop") {
-    //   font-size: 44px;
-    // }
+    @include media(">=desktop") {
+      font-size: 42px;
+      margin-bottom: 0;
+    }
   }
 
   &__form-title {
@@ -221,9 +237,14 @@ img {
     font-weight: fw("bold");
     margin-bottom: 25px;
 
-    // @include media(">=desktop") {
-    //   font-size: 44px;
-    // }
+    @include media(">=desktop") {
+      display: flex;
+      justify-content: flex-end;
+      text-align: right;
+      font-size: 42px;
+      width: 340px;
+      margin-left: auto;
+    }
   }
 
   &__right {

@@ -116,4 +116,134 @@
       }
     }
   }
+
+  .section__title {
+    @include media(">=desktop") {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.circle {
+  height: 400px;
+  position: relative;
+  margin: 60px 0;
+
+  @include media(">=tablet") {
+    height: 240px;
+    margin: 0;
+  }
+
+  @include media(">=desktop") {
+    height: 320px;
+    margin-left: 60px;
+  }
+
+  @include media(">=1440px") {
+    height: 340px;
+  }
+
+  &__item {
+    background-color: color(gray, silver-chalice);
+    border-radius: 50%;
+    border: 5px solid color(blue, matisse);
+    display: flex;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 180px;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    @include media(">=tablet") {
+      right: inherit;
+      top: 80px;
+      width: 160px;
+    }
+
+    @include media(">=desktop") {
+      right: inherit;
+      top: 120px;
+      width: 200px;
+    }
+
+    @include media(">=1440px") {
+      width: 240px;
+    }
+
+    &::after {
+      border-radius: 50%;
+      content: "";
+      display: block;
+      height: 0;
+      padding-bottom: 100%;
+      width: 100%;
+    }
+
+    &--big {
+      background-color: color(blue, matisse);
+      width: 220px;
+      z-index: 0;
+      top: 160px;
+
+      @include media(">=tablet") {
+        left: 130px;
+        width: 200px;
+        top: 0;
+      }
+
+      @include media(">=desktop") {
+        left: 160px;
+        width: 260px;
+        top: 0;
+      }
+
+      @include media(">=1440px") {
+        left: 190px;
+        width: 300px;
+      }
+
+      .circle__title {
+        font-size: 24px;
+
+        @include media(">=tablet") {
+          font-size: 20px;
+        }
+
+        @include media(">=desktop") {
+          font-size: 30px;
+        }
+
+        @include media(">=1440px") {
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    align-self: center;
+    color: color(mono, white);
+    font-size: 20px;
+    font-weight: fw("bold");
+    line-height: 1.2;
+    left: 0;
+    padding: 30px;
+    position: absolute;
+    width: 100%;
+
+    @include media(">=tablet") {
+      font-size: 16px;
+    }
+
+    @include media(">=desktop") {
+      font-size: 22px;
+    }
+
+    @include media(">=1440px") {
+      font-size: 28px;
+    }
+  }
 }

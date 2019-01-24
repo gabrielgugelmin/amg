@@ -12,7 +12,8 @@
     }
 
     @include media(">=desktop") {
-      font-size: 18px;
+      font-size: 26px;
+      margin-bottom: 40px;
     }
   }
 
@@ -34,6 +35,10 @@
 
     svg {
       height: 42px;
+
+      @include media(">=desktop") {
+        height: 54px;
+      }
 
       path {
         fill: color(blue, matisse);

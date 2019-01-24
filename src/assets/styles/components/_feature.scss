@@ -2,39 +2,61 @@
   &__item {
     background-color: color(blue, matisse);
     background-size: cover;
-    background-position: 110px center;
+    background-position: right center;
     background-repeat: no-repeat;
     height: 220px;
 
     @include media(">=desktop") {
-      background-position: right center;
+      background-position: 78% center;
       background-size: contain;
       height: 300px;
+    }
+
+    .row {
+      align-items: center;
+      height: 100%;
     }
 
     &--white {
       background-color: color(mono, white);
       background-position: -300px center;
 
+      @include media(">=tablet") {
+        background-position: -22% center;
+      }
+
+      @include media(">=wide") {
+        background-position: 22% center;
+      }
+
       .feature__title {
         color: color(blue, matisse);
         text-align: left;
+
+        @include media(">=desktop") {
+          margin-left: initial;
+          margin-right: auto;
+        }
       }
     }
   }
 
   &__title {
+    display: flex;
     color: color(mono, white);
     font-size: 20px;
     font-style: italic;
     font-weight: fw("light");
+    align-self: center;
 
     @include media(">=desktop") {
       text-align: right;
+      margin-left: auto;
     }
 
     @include media(">=desktop") {
       font-size: 30px;
+      max-width: 400px;
     }
 
     // @include media(">=wide") {

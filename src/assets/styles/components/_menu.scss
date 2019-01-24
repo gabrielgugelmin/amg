@@ -56,6 +56,7 @@
   &__link {
     color: color(blue, matisse);
     display: block;
+    letter-spacing: ls(150, 16);
 
     @include media(">=desktop") {
       color: color(mono, white);

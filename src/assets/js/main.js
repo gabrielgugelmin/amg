@@ -1,5 +1,5 @@
 $(function () {
-	clickOutsideMenu();
+  clickOutsideMenu();
 
   // menu
   $('.js-open-menu').on('click', function(e) {

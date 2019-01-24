@@ -4,17 +4,42 @@
   justify-content: center;
 
   &__item {
-    margin-bottom: 20px;
-    max-width: 294px;
+    margin: 0 auto 20px;
+    // max-width: 294px;
+    right: 0;
     width: 100%;
 
     @include media(">=tablet") {
-      margin: 0 8px 20px;
-      width: calc(50% - 16px);
+      max-width: inherit;
+    }
+
+    @include media(">=tablet", "<desktop") {
+      max-width: inherit;
+      margin: 0 8px 20px 0;
+      width: calc(50% - 4px);
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @include media(">=desktop", "<wide") {
+      max-width: inherit;
+      margin: 0 8px 20px 0;
+      width: calc(33.333% - 6px);
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
 
     @include media(">=wide") {
-      width: calc(25% - 16px);
+      margin: 0 8px 20px 0;
+      width: calc(25% - 6px);
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -35,7 +60,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 174px;
+    height: 285px;
+
+    @include media(">=tablet") {
+      height: 174px;
+    }
   }
 
   &__box {
