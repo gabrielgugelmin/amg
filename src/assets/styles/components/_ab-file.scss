@@ -3,7 +3,7 @@
   border-radius: 8px;
   color: color(blue, matisse);
   display: flex;
-  padding: 15px 15px 60px;
+  padding: 15px;
   position: relative;
   margin-bottom: 30px;
 
@@ -19,9 +19,9 @@
     border-radius: 10px;
     display: inline-block;
     flex-shrink: 0;
-    height: 80px;
+    height: 90px;
     max-width: 100%;
-    width: 80px;
+    width: 90px;
 
     @include media(">=tablet") {
       height: 150px;
@@ -58,6 +58,7 @@
 
   &__location {
     font-size: 14px;
+    margin-bottom: 5px;
 
     @include media(">=desktop") {
       font-size: 22px;
@@ -70,15 +71,17 @@
   }
 
   &__tel {
-    bottom: 15px;
-    font-size: 20px;
-    font-weight: fw("bold");
-    left: 0;
-    letter-spacing: ls(20, 50);
-    padding-top: 20px;
-    position: absolute;
-    right: 15px;
-    text-align: center;
+    // bottom: 15px;
+    // font-size: 20px;
+    // font-weight: fw("bold");
+    // left: 0;
+    // letter-spacing: ls(20, 50);
+    // padding-top: 20px;
+    // position: absolute;
+    // right: 15px;
+    // text-align: center;
+
+    font-size: 15px;
 
     @include media(">=tablet") {
       position: relative;
@@ -97,7 +100,7 @@
 
     button {
       margin-left: 5px;
-      padding: 8px 15px;
+      padding: 5px 10px;
       font-size: 14px;
       font-weight: fw("semibold");
       border-radius: 10px;

@@ -1,7 +1,11 @@
 .form {
   &__control {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     position: relative;
+
+    @include media(">=desktop") {
+      margin-bottom: 15px;
+    }
 
     &--icon {
       .input {

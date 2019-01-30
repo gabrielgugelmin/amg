@@ -12,7 +12,7 @@
 
   @include media(">=desktop") {
     height: 140px;
-    padding: 90px 0 15px;
+    padding: 40px 0 15px;
   }
 
   &__logo {
@@ -27,7 +27,7 @@
     @include media(">=desktop") {
       margin-top: 0;
       display: inline-block;
-      width: 120px;
+      width: 180px;
 
       path,
       polygon {

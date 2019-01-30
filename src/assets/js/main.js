@@ -292,7 +292,7 @@ $(function () {
 
   function getItems() {
     var contentToLoad = $('.js-grid').data('load');
-    $.getJSON("/assets/json/" + contentToLoad + ".json", function (data) {})
+    $.getJSON("/front/assets/json/" + contentToLoad + ".json", function (data) {})
     .fail(function (data) {
     }).done(function (data) {
       $.each(data, function (index, item) {
